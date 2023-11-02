@@ -8,6 +8,7 @@
 
   --header-foreground: #474747;
   --main-color: #786C60;
+  --secondary-color: #BFA87E;
   --hover-color: #E3D5BB;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -26,8 +27,18 @@
 
 h1 {
   font-size: 6em;
+  line-height: 1.2;
   font-weight: 500;
   color: var(--main-color);
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1.416em;
+  line-height: 1.95;
+  font-weight: 300;
+  color: var(--header-foreground);
+  margin-bottom: 24px;
 }
 
 .app-header {
@@ -35,7 +46,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 65px;
+  padding: 25px 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,8 +57,16 @@ h1 {
 }
 
 .logo-header {
-  height: 4em;
+  width: 200px;
   cursor: pointer;
+}
+
+.navigation .logo-link {
+  margin-left: 0;
+}
+
+.navigation .logo-link::after {
+  width: 0;
 }
 
 .navigation {
@@ -112,10 +131,11 @@ h1 {
   opacity: 1;
 }
 
-
-
 .header-button {
   position: relative;
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--header-foreground);
   border: 1px solid var(--header-foreground);
   border-radius: 50px;
   padding: 13px 26px;
@@ -145,7 +165,7 @@ h1 {
 }
 
 .header-button:hover::before {
-  transform: translateY(-66px);
+  transform: translateY(-62px);
 }
 
 @keyframes moveWave {
@@ -155,6 +175,23 @@ h1 {
   100% {
     background-position: 100% 100%;
   }
+}
+
+.page-button {
+  position: relative;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--header-foreground);
+  border-radius: 50px;
+  padding: 13px 26px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  transition: background-color 0.3s;
+}
+
+.page-button:hover {
+  background-color: var(--hover-color);
 }
 
 .section-home-hero {
@@ -169,5 +206,11 @@ h1 {
 
 .hero-container {
   position: fixed;
-  top: 170px;
+  top: 204px;
+  margin-left: 65px;
+  width: 764px;
+}
+
+.hero-paragraph__1 p {
+  margin-bottom: 52px;
 }

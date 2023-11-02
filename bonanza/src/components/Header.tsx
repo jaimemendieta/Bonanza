@@ -16,9 +16,11 @@ const Header = () => {
     return (
         <header className="app-header">
             <nav className="navigation">
-                <img className="logo-header"
-                     src="/bonanza-horizontal-combination-mark.svg"
-                     alt="Bonanza Logo"/>
+                <Link href="/" className="logo-link">
+                    <img className="logo-header"
+                         src="/bonanza-horizontal-combination-mark.svg"
+                         alt="Bonanza Logo"/>
+                </Link>
                 <Link href="/about">About</Link>
                 <Link href="/services">Services</Link>
                 <Link href="/contact">Contact</Link>
