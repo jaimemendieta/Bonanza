@@ -1,6 +1,18 @@
+'use client'
 import Link from 'next/link';
+import {useState} from "react";
 
 const Header = () => {
+    const [hovered, setHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setHovered(false);
+    };
+
     return (
         <header className="app-header">
             <nav className="navigation">
@@ -13,14 +25,27 @@ const Header = () => {
                 <Link href="/faq">FAQ</Link>
             </nav>
 
-            <div className="flex items-center space-x-4">
-                <span className="navigation language-header">
-                    <img className="language-icon-header"
+            <div className="header-action">
+                <span
+                    className="navigation-language-header"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <img className={`language-icon-header ${hovered ? 'visible' : ''}`}
                          src="/language.svg"
                          alt="Language Icon"/>
-                    Español
+                    <div
+                        className={`language-header-translation ${hovered ? 'visible' : ''}`}
+                        >
+                        Ver en&nbsp;
+                    </div>
+                    <div
+                        className={`language-header ${hovered ? '' : 'visible'}`}
+                    >
+                        Español
+                    </div>
                 </span>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded">SCHEDULE APPOINTMENT</button>
+                <button className="header-button">SCHEDULE APPOINTMENT</button>
             </div>
         </header>
     );
