@@ -10,6 +10,8 @@
   --main-color: #786C60;
   --secondary-color: #BFA87E;
   --hover-color: #E3D5BB;
+  --hover-secondary-color: #808080;
+  --main-background: #FBFAF5;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -31,6 +33,22 @@ h1 {
   font-weight: 500;
   color: var(--main-color);
   margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 3.7075em;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--main-color);
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 2.29125em;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--header-foreground);
+  margin-bottom: 16px;
 }
 
 p {
@@ -194,18 +212,52 @@ p {
   background-color: var(--hover-color);
 }
 
+.body-button {
+  display: flex;
+  align-items: center;
+  font-size: 1.41625em;
+  font-weight: 300;
+  padding-bottom: 6px;
+  color: var(--header-foreground);
+  border-bottom: 1px solid var(--header-foreground);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.body-button:hover {
+  color: var(--hover-secondary-color);
+  border-bottom: 1px solid var(--hover-secondary-color);
+}
+
+.button-text {
+  line-height: 0;
+}
+
+.arrow-icon {
+  width: 20px;
+  margin-left: 6px;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  image-rendering: crisp-edges;
+}
+
+.body-button:hover .arrow-icon {
+  transform: rotate(90deg);
+}
+
 .section-home-hero {
   display: flex;
   height: 100vh;
   width: 100%;
   background-image: url("../../public/Hero.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
+  overflow: hidden;
 }
 
 .hero-container {
-  position: fixed;
+  position: relative;
   top: 204px;
   margin-left: 65px;
   width: 764px;
@@ -213,4 +265,33 @@ p {
 
 .hero-paragraph__1 p {
   margin-bottom: 52px;
+}
+
+.section-home-emdr-explained {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--main-background);
+}
+
+.explained-container {
+  margin-left: 65px;
+  padding-top: 44px;
+  padding-right: 16px;
+  max-width: 860px;
+}
+
+.explanation-container {
+  margin-bottom: 44px;
+}
+
+.explained-image {
+  height: 100vh;
+  min-width: 952px;
+  background-image: url("../../public/Bonanza-H.png");
+  background-size: cover;
+  background-position: center;
+  margin-left: auto;
 }
