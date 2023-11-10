@@ -501,9 +501,9 @@ html[lang="es"] .lang-es a {
  */
 .section-hero {
   display: flex;
-  height: 100vh;
+  height: 43vh;
   width: 100%;
-  background-image: url("../../public/hero-mobile.png");
+  background-image: url("../../public/hero-mobile.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
@@ -524,12 +524,20 @@ html[lang="es"] .lang-es a {
   }
 }
 
+.below-hero {
+  display: flex;
+  min-height: 57vh;
+  background-color: var(--main-background);
+  align-items: center;
+}
+
 .container__hero {
   position: relative;
-  top: 10%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15% 10%;
   width: 100%;
+  max-width: 475px;
 }
 
 @media (min-width: 1920px) {
@@ -542,17 +550,18 @@ html[lang="es"] .lang-es a {
 }
 
 .title__hero {
-  max-width: 320px;
+  max-width: 292px;
 }
 
 @media (min-width: 1920px) {
   .title__hero{
-    max-width: none;
+    max-width: 320px;
   }
 }
 
 .paragraph__hero__1 p {
   margin-bottom: 20px;
+  max-width: 600px;
 }
 
 @media (min-width: 1920px) {

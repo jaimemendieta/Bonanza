@@ -1,24 +1,11 @@
 import Image from "next/image";
 import BonanzaImageH from "../../public/Bonanza-H.png";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <main>
-        <section className="section section-hero">
-            <div className="container__hero">
-                <div className="title__hero">
-                    <h1>Discover Healing & Renewal</h1>
-                </div>
-                <div className="paragraph__hero__1">
-                    <p>Journey with Bonanza, the haven for evidence-based EMDR therapy, where traumas and stress disorders are transformed into strengths.</p>
-                </div>
-                <div className="paragraph__hero__2">
-                    <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
-                </div>
-                <button className="page-button">Schedule Appointment</button>
-            </div>
-        </section>
-
+        <Hero />
         <section className="section section-emdr-explained">
             <div className="container__explained">
                 <div className="explanation">
