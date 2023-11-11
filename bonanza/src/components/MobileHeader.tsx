@@ -1,16 +1,41 @@
 'use client'
 import Link from 'next/link';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const MobileHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+
+            if (currentScrollPos > prevScrollPos) {
+                // scrolling down
+                setVisible(false);
+            } else {
+                // scrolling up
+                setVisible(true);
+            }
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            // clean event on unmount
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [prevScrollPos]);
+
     return (
-        <header className={`app-header mobile-header ${menuOpen ? 'menu-open' : ''}`}>
+        <header className={`app-header mobile-header ${menuOpen ? 'menu-open' : ''} ${visible ? "visible" : "hidden"}`}>
             <div className="mobile-header-content">
                 <div className="mobile-header-left">
                     <Link href="/" className="logo-link">

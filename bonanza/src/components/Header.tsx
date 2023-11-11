@@ -6,6 +6,9 @@ import MobileHeader from "@/components/MobileHeader";
 const Header = () => {
     const [hovered, setHovered] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
 
     const handleMouseEnter = () => {
         setHovered(true);
@@ -30,12 +33,36 @@ const Header = () => {
         };
     }, []);
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+
+            if (currentScrollPos > prevScrollPos) {
+                // scrolling down
+                setVisible(false);
+            } else {
+                // scrolling up
+                setVisible(true);
+            }
+
+            setPrevScrollPos(currentScrollPos);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            // clean event on unmount
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [prevScrollPos]);
+
     return (
         <>
             {isMobileView ? (
                 <MobileHeader />
             ) : (
-                <header className="app-header">
+                <header className={`app-header ${visible ? "visible" : "hidden"}`}>
                     <nav className="navigation">
                         <Link href="/" className="logo-link">
                             <img className="logo-header"

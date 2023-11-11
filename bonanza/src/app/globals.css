@@ -79,7 +79,7 @@ h3 {
   line-height: 1.2;
   font-weight: 500;
   color: var(--main-foreground);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 1920px) {
@@ -110,6 +110,20 @@ p {
   }
 }
 
+em {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.plist {
+  margin-bottom: 12px;
+}
+.pattern {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 16px;
+  margin-top: 44px;
+}
 .app-header {
   position: fixed;
   top: 0;
@@ -123,6 +137,11 @@ p {
   font-size: 0.875em;
   font-weight: 500;
   color: var(--main-foreground);
+  transition: top 0.3s;
+}
+
+.app-header.hidden {
+  top: -100px;
 }
 
 .mobile-header {
@@ -133,6 +152,11 @@ p {
   width: 100%;
   padding: 10px 30px;
   z-index: 99;
+  transition: top 0.3s;
+}
+
+.mobile-header.hidden {
+  top: -100px;
 }
 
 .mobile-header-content {
@@ -570,7 +594,7 @@ html[lang="es"] .lang-es a {
   }
 }
 
-.section-emdr-explained {
+.section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -606,6 +630,11 @@ html[lang="es"] .lang-es a {
   }
 }
 
+.explanation__first {
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+
 .explanation {
   margin-bottom: 44px;
 }
@@ -614,6 +643,14 @@ html[lang="es"] .lang-es a {
   display: flex;
   height: 33vh;
   margin-left: auto;
+}
+
+.image__giannina {
+  display: flex;
+  height: 33vh;
+  margin-left: auto;
+  margin-bottom: 16px;
+  margin-top: 16px;
 }
 
 @media (min-width: 1920px) {
@@ -625,5 +662,9 @@ html[lang="es"] .lang-es a {
 }
 
 .image__explained img {
+  object-fit: cover;
+}
+
+.image__giannina img {
   object-fit: cover;
 }
