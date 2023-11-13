@@ -668,3 +668,28 @@ html[lang="es"] .lang-es a {
 .image__giannina img {
   object-fit: cover;
 }
+
+.container__questions {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-content: center;
+  align-items: center;
+}
+
+.container.question {
+  background-color: white;
+  margin: 30px;
+  padding: 80px 36px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container.question h3 {
+  font-size: 1.1em;
+}
+
+.container.question p {
+  font-size: 1.1em;
+}

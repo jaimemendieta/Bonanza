@@ -248,9 +248,30 @@ export default function Home() {
             <div className="container__explained">
                 <div className="explanation__first">
                     <h3>Key Questions for Your Insurance Provider</h3>
-                    <p>
-                        Lorem ipsum.
-                    </p>
+
+                    <div className="container container__questions">
+                        <div className="container question">
+                            <h3>Mental Health Benefits</h3>
+                            <p>Does my health insurance plan include mental health benefits?</p>
+                        </div>
+
+                        <div className="container question">
+                            <h3>Deductibles</h3>
+                            <p>Do I have a deductible? If so, what is it, and have I met it yet?</p>
+                        </div>
+
+                        <div className="container question">
+                            <h3>Session Limitations</h3>
+                            <p>Does my plan limit the number of sessions I can have per calendar year? If so, what's
+                            the limit?</p>
+                        </div>
+
+                        <div className="container question">
+                            <h3>Primary Care Physician Approval</h3>
+                            <p>Do I need a written approval from my primary care physician for services to be
+                            covered?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="image__explained">
