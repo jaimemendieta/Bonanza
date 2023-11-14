@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local';
 import './globals.css'
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const museo_sans = localFont({
     src: [
@@ -46,7 +47,7 @@ const museo_sans = localFont({
             style: 'italic',
         },
         {
-            path: '../fonts/MuseoSans-900.otf',
+            path: '../fonts/MuseoSansDisplay-Light.ttf',
             weight: '900',
             style: 'normal',
         },
@@ -83,6 +84,7 @@ export default function RootLayout({
       <body className={museo_sans.className}>
       <Header />
       {children}
+      <Footer />
       </body>
     </html>
   )

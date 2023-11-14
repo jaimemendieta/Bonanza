@@ -8,8 +8,14 @@ import BonanzaImageH from "../../public/Bonanza-H.png";
 import Giannina from "../../public/Giannina-1.png";
 import Luna from "../../public/Luna.png";
 import Parquet from "../../public/parquet.png";
+import Earth from "../../public/earth-pattern.png";
+import Star_Light from "../../public/star-light.png";
+import Sun from "../../public/sun.png";
+import Wavy from "../../public/wavy.png";
+import BonanzaVert from "../../public/bonanza-vertical-combination-mark.svg";
 
 import Hero from "@/components/Hero";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -55,6 +61,22 @@ export default function Home() {
 
                 <button className="body-button">
                     <span className="button-text">More Services</span>
+                    <span className="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="square"
+                                strokeMiterlimit="10"
+                                strokeWidth="32"
+                                d="M112 244l144-144 144 144M256 120v292"
+                            />
+                        </svg>
+                    </span>
+                </button>
+
+                <button className="body-button">
+                    <span className="button-text">Learn More</span>
                     <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -119,7 +141,7 @@ export default function Home() {
         <section className="section section-luna">
             <div className="container__explained">
                 <div className="explanation">
-                    <Image className="pattern" src={Parquet} alt="Parquet Icon"/>
+                    <Image className="pattern" src={Sun} alt="Pattern Icon"/>
                     <h3>Advanced Training & Certification:</h3>
                     <p className="plist">
                         Giannina’s commitment to continued learning and excellence is evident in her numerous
@@ -262,16 +284,47 @@ export default function Home() {
 
                         <div className="container question">
                             <h3>Session Limitations</h3>
-                            <p>Does my plan limit the number of sessions I can have per calendar year? If so, what's
-                            the limit?</p>
+                            <p>
+                                Does my plan limit the number of sessions I can have per calendar year? If so, what's
+                                the limit?
+                            </p>
                         </div>
 
                         <div className="container question">
                             <h3>Primary Care Physician Approval</h3>
-                            <p>Do I need a written approval from my primary care physician for services to be
-                            covered?</p>
+                            <p>
+                                Do I need a written approval from my primary care physician for services to be
+                                covered?
+                            </p>
                         </div>
                     </div>
+
+                    <p>
+                        We advise you to reach out to your insurance provider to ensure you're well-informed about your
+                        benefits and coverage options.
+                    </p>
+
+                    <p>
+                        Remember, investing in mental health is invaluable. We aim to make the process as transparent
+                        and straightforward as possible for you. If you have any questions or need clarification,
+                        please don't hesitate to contact us.
+                    </p>
+
+                    <button className="body-button">
+                        <span className="button-text">Contact Us</span>
+                        <span className="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="square"
+                                strokeMiterlimit="10"
+                                strokeWidth="32"
+                                d="M112 244l144-144 144 144M256 120v292"
+                            />
+                        </svg>
+                    </span>
+                    </button>
                 </div>
             </div>
             <div className="image__explained">
@@ -283,9 +336,26 @@ export default function Home() {
             <div className="container__explained">
                 <div className="explanation">
                     <h2>Easy Payment Options</h2>
-                    <h3>Sub Heading</h3>
+                    <h3>
+                        We strive to make the payment process as seamless as possible for you. Here's how you can
+                        settle your sessions with us:</h3>
+                    <p className="plist">
+                        <em>Cash:</em> Direct payments can be made during your session
+                    </p>
+                    <p className="plist">
+                        <em>Check:</em> Kindly ensure checks are made payable to "Giannina Fuentes"
+                    </p>
+                    <p className="plist">
+                        <em>Credit Cards:</em> We accept all major credit cards, including HSA. Secure transactions
+                        guaranteed.
+                    </p>
                     <p>
-                        Lorem ipsum.
+                        <em>Online Payments:</em> For your convenience, we also offer secure online payment options
+                        through Simple Practice on our website.
+                    </p>
+
+                    <p>
+                        <em>Note:</em> Please ensure all payments are made promptly to ensure uninterrupted service.
                     </p>
                 </div>
             </div>
@@ -298,10 +368,42 @@ export default function Home() {
             <div className="container__explained">
                 <div className="explanation__first">
                     <h2>Flexible Scheduling for Your Convenience</h2>
-                    <h3>Sub Heading</h3>
-                    <p>
-                        Lorem ipsum.
+                    <h3>Your appointment time is reserved just for you.</h3>
+                    <p className="plist">
+                        We understand that unexpected events can occur, but in order to maintain the integrity of
+                        scheduling for all our clients, we adhere to the following policy:
                     </p>
+                    <p className="plist">
+                        <em>Cancellation:</em> If you need to cancel your appointment, please inform us at least 24
+                        hours in advance. This gives us the opportunity to reallocate the time slot to someone else in
+                        need.
+                    </p>
+                    <p>
+                        <em>Late Cancellations & No-Shows:</em> Appointments cancelled with less than 24 hours notice
+                        or missed entirely will be charged the full session rate.
+                    </p>
+
+                    <p>
+                        <em>Rescheduling:</em> We value your commitment to therapy and understand that scheduling can
+                        sometimes be a challenge. To find available times and dates that are convenient for you,
+                        please use our scheduling tool on Simple Practice.
+                    </p>
+
+                    <button className="body-button">
+                        <span className="button-text">Book Appointment</span>
+                        <span className="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="square"
+                                strokeMiterlimit="10"
+                                strokeWidth="32"
+                                d="M112 244l144-144 144 144M256 120v292"
+                            />
+                        </svg>
+                    </span>
+                    </button>
                 </div>
             </div>
             <div className="image__explained">
@@ -336,10 +438,6 @@ export default function Home() {
                 <Image src={BonanzaImageG} alt="Scenic Image G"/>
             </div>
         </section>
-
-        <footer className="footer">
-
-        </footer>
     </main>
   )
 }
