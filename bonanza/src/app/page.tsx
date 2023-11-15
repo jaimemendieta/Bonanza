@@ -415,10 +415,33 @@ export default function Home() {
             <div className="container__explained">
                 <div className="explanation__first">
                     <h2>Frequently Asked Questions</h2>
-                    <h3>Sub Heading</h3>
-                    <p>
-                        Lorem ipsum.
-                    </p>
+                    <div className="accordion-list-container">
+                        <ul className="accordion-list">
+                            <li className="accordion-list_item">
+                                <details className="accordion">
+                                    <summary className="accordion_summary">
+                                        <span className="accordion_summary_inner">
+                                            <span className="accordion_title">
+                                                <h3>How do I book my first session?</h3>
+                                            </span>
+                                            <span className="accordion_icon"></span>
+                                        </span>
+                                    </summary>
+                                    <div className="accordion_content">
+                                        <p>
+                                            IT’S NOT COMPLICATED!
+                                            We want to make it as easy as possible for you. You can call or email
+                                            anytime. However, the best way to get started is to click the Get Started
+                                            Now button to complete and send the form. Email certainly works - but if
+                                            you include your phone number on the form - it is easier to answer all of
+                                            your questions, and book your first session. Physician or specialist
+                                            referral is not required.
+                                        </p>
+                                    </div>
+                                </details>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>

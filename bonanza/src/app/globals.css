@@ -840,3 +840,54 @@ html[lang="es"] .lang-es a {
   color: white;
   font-size: var(--font-sm);
 }
+
+details {
+  display: block;
+}
+
+.accordion {
+  position: relative;
+}
+
+.accordion-list_item {
+}
+
+.accordion_summary::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: bottom left;
+}
+
+.accordion_summary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform-origin: top left;
+}
+
+.accordion_summary::marker {
+  content: none;
+}
+
+.accordion_icon::after {
+  rotate: -90deg;
+}
+
+.accordion_icon::before, .accordion_icon::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 0;
+  width: 5%;
+  height: 1px;
+  background-color: currentColor;
+}
