@@ -15,6 +15,7 @@ import Wavy from "../../public/wavy.png";
 import BonanzaVert from "../../public/bonanza-vertical-combination-mark.svg";
 
 import Hero from "@/components/Hero";
+import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
 
 export default function Home() {
@@ -334,7 +335,7 @@ export default function Home() {
 
         <section className="section section-easy">
             <div className="container__explained">
-                <div className="explanation">
+                <div className="explanation__first">
                     <h2>Easy Payment Options</h2>
                     <h3>
                         We strive to make the payment process as seamless as possible for you. Here's how you can
@@ -411,40 +412,7 @@ export default function Home() {
             </div>
         </section>
 
-        <section className="section section-faq">
-            <div className="container__explained">
-                <div className="explanation__first">
-                    <h2>Frequently Asked Questions</h2>
-                    <div className="accordion-list-container">
-                        <ul className="accordion-list">
-                            <li className="accordion-list_item">
-                                <details className="accordion">
-                                    <summary className="accordion_summary">
-                                        <span className="accordion_summary_inner">
-                                            <span className="accordion_title">
-                                                <h3>How do I book my first session?</h3>
-                                            </span>
-                                            <span className="accordion_icon"></span>
-                                        </span>
-                                    </summary>
-                                    <div className="accordion_content">
-                                        <p>
-                                            IT’S NOT COMPLICATED!
-                                            We want to make it as easy as possible for you. You can call or email
-                                            anytime. However, the best way to get started is to click the Get Started
-                                            Now button to complete and send the form. Email certainly works - but if
-                                            you include your phone number on the form - it is easier to answer all of
-                                            your questions, and book your first session. Physician or specialist
-                                            referral is not required.
-                                        </p>
-                                    </div>
-                                </details>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <FAQSection />
 
         <section className="section section-ready">
             <div className="container__explained">
