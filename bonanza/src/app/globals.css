@@ -42,11 +42,11 @@ h1 {
   font-size: var(--font-med);
   line-height: 1.2;
   font-weight: 500;
-  color: var(--main-color-dark);
+  color: var(--main-color);
   margin-bottom: 8px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   h1 {
     font-size: var(--font-xl);
     line-height: 1.2;
@@ -64,7 +64,7 @@ h2 {
   margin-bottom: 8px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   h2 {
     font-size: 3.7075em;
     line-height: 1.2;
@@ -82,7 +82,7 @@ h3 {
   margin-bottom: 8px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   h3 {
     font-size: 2.29125em;
     line-height: 1.2;
@@ -100,7 +100,7 @@ p {
   margin-bottom: 24px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1600px) {
   p {
     font-size: 1.416em;
     line-height: 1.95;
@@ -118,13 +118,22 @@ em {
 .plist {
   margin-bottom: 12px;
 }
+
 .pattern {
+  display: block;
   width: 40px;
   height: 40px;
   margin-bottom: 16px;
   margin-top: 44px;
   opacity: 75%;
 }
+
+@media (min-width: 1025px) {
+  .pattern {
+    display: none;
+  }
+}
+
 .app-header {
   position: fixed;
   top: 0;
@@ -542,17 +551,15 @@ html[lang="es"] .lang-es a {
   overflow: hidden;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
   .section-hero {
     display: flex;
-    min-height: 1080px;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-image: url("../../public/hero-desktop.png");
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
-    overflow: hidden;
   }
 }
 
@@ -572,12 +579,13 @@ html[lang="es"] .lang-es a {
   max-width: 475px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
   .container__hero {
-    position: relative;
-    top: 204px;
+    margin-right: auto;
+    padding: 0;
+    margin-top: 204px;
     margin-left: 65px;
-    width: 764px;
+    max-width: 764px;
   }
 }
 
@@ -585,9 +593,9 @@ html[lang="es"] .lang-es a {
   max-width: 292px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
   .title__hero{
-    max-width: 320px;
+    max-width: 764px;
   }
 }
 
@@ -596,9 +604,10 @@ html[lang="es"] .lang-es a {
   max-width: 600px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
   .paragraph__hero__1 p {
     margin-bottom: 52px;
+    max-width: 764px;
   }
 }
 
@@ -611,14 +620,33 @@ html[lang="es"] .lang-es a {
   overflow: hidden;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
+  .section {
+    flex-direction: row;
+    min-height: 100vh;
+    align-items: stretch;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section-why {
+    align-content: space-between;
+  }
+}
+
+@media (min-width: 1025px) {
   .section-emdr-explained {
     display: flex;
     flex-direction: row;
-    align-items: center;
     width: 100%;
     background-color: var(--main-background);
     overflow: hidden;
+  }
+}
+
+@media (min-width: 1025px) {
+  .section-affordable, .section-easy {
+    flex-direction: row-reverse;
   }
 }
 
@@ -629,12 +657,38 @@ html[lang="es"] .lang-es a {
   max-width: 860px;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1025px) {
   .container__explained {
-    margin-left: 65px;
+    padding-right: 0;
+    padding-left: 65px;
     padding-top: 44px;
-    padding-right: 65px;
-    max-width: 860px;
+    margin-right: 62px;
+    margin-left: auto;
+    max-width: 1041px;
+  }
+
+  .container__explained.easy, .container__explained.flexible {
+    display: flex;
+    align-items: center;
+  }
+
+  .section-faq, .section-ready {
+    min-height: auto;
+    align-items: center;
+  }
+
+  .faq {
+    margin-left: 0;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .section-flexible .image__explained, .section-luna .image__explained {
+    width: auto;
+  }
+
+  .section-flexible .container__explained, .section-luna .container__explained {
+    margin-left: 0;
   }
 }
 
@@ -653,19 +707,31 @@ html[lang="es"] .lang-es a {
   margin-left: auto;
 }
 
+@media (min-width: 1025px) {
+  .image__explained {
+    height: auto;
+    width: 50%;
+    margin-left: auto;
+  }
+}
+
 .image__giannina {
   display: flex;
   height: 33vh;
-  margin-left: auto;
   margin-bottom: 16px;
   margin-top: 16px;
 }
 
-@media (min-width: 1920px) {
-  .image__explained {
-    display: flex;
-    height: 100vh;
-    margin-left: auto;
+@media (min-width: 1025px) {
+  .image__giannina {
+    margin: 0;
+    height: 100%;
+    min-width: 750px;
+  }
+
+  .image__giannina img {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -685,12 +751,36 @@ html[lang="es"] .lang-es a {
   align-items: center;
 }
 
+@media (min-width: 1025px) {
+  .container__questions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 60px;
+    max-width: 100%;
+    margin-bottom: 44px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .container.question.question {
+    padding: 100px 36px;
+    margin: 0;
+  }
+
+  .container.question.question h3 {
+    font-size: var(--font-sm);
+  }
+
+  .container.question.question p {
+    font-size: var(--font-sm);
+  }
+}
+
 .container.question {
   background-color: white;
   margin: 30px;
   padding: 80px 36px;
-  align-content: center;
-  align-items: center;
   text-align: center;
 }
 
@@ -805,6 +895,16 @@ html[lang="es"] .lang-es a {
   }
 }
 
+@media (min-width: 1920px) {
+  .logo__background {
+    height: 80%;
+    width: 30%;
+    background-size: 450%;
+    background-position-x: -1295px;
+    background-position-y: -420px;
+  }
+}
+
 .logo-vert {
   fill: white;
   width: 12em;
@@ -854,6 +954,7 @@ summary {
 }
 
 .accordion-list_item {
+
 }
 
 .accordion_summary {
@@ -871,6 +972,10 @@ summary {
   height: 1px;
   background-color: currentColor;
   transform-origin: top left;
+}
+
+.accordion-list_item:last-child .accordion.is-active::before {
+  bottom: -24px;
 }
 
 .accordion_summary::after {
@@ -927,7 +1032,7 @@ summary {
 
 .accordion_summary_inner:hover .accordion_title {
   color: var(--main-background);
-  translate: 6px;
+  translate: 1.5em;
 }
 
 .accordion_title {
@@ -975,5 +1080,5 @@ summary {
 
 .accordion_summary:hover .accordion_icon {
   color: var(--main-background);
-  translate: -6px;
+  translate: -1.5em;
 }

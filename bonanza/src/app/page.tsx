@@ -15,6 +15,7 @@ import Wavy from "../../public/wavy.png";
 import BonanzaVert from "../../public/bonanza-vertical-combination-mark.svg";
 
 import Hero from "@/components/Hero";
+import WhySection from "@/components/WhySection";
 import FAQSection from "@/components/FAQSection";
 import Link from "next/link";
 
@@ -92,52 +93,12 @@ export default function Home() {
                     </span>
                 </button>
             </div>
-            <div className="image__explained">
+            <div className="image__explained ">
                 <Image src={BonanzaImageH} alt="Scenic Image H"/>
             </div>
         </section>
 
-        <section className="section section-why">
-            <div className="container__explained">
-                <div className="explanation__first">
-                    <h2>Why Choose Bonanza for Your Healing Journey?</h2>
-
-                    <div className="image__giannina">
-                        <Image src={Giannina} alt="Therapist Image"/>
-                    </div>
-
-                    <h3>Meet Giannina Fuentes, LCSW - The Heart of Bonanza</h3>
-                    <p>
-                        Giannina Fuentes is not just another therapist; she's a beacon of hope, a testament to
-                        dedication, and the guiding light of Bonanza. With a strong academic foundation from the
-                        University of Utah, holding both a Bachelor's Degree in Psychology and a Master's Degree in
-                        Social Work, she is a decorated mental health professional.
-                    </p>
-                </div>
-
-                <div className="explanation">
-                    <h3>Experience & Expertise:</h3>
-                    <p>
-                        <em>Diverse Clientele:</em> Giannina has aided individuals across all age groups, guiding them through
-                        personal and familial challenges.
-                    </p>
-                    <p>
-                        <em>Specializations:</em> Her therapeutic prowess spans areas like childhood and adult trauma, domestic
-                        violence, anxiety, depression, stress, and relationship struggles.
-                    </p>
-                    <p>
-                        <em>Commitment to Children:</em> Giannina's unwavering dedication shines through her work as a child
-                        welfare worker for the Division of Child and Family Services, ensuring the welfare of children
-                        and families.
-                    </p>
-                    <p>
-                        <em>Inclusive Care:</em> She has a heart for those with disabilities, offering unparalleled support to
-                        individuals with conditions such as autism and ADHD.
-                    </p>
-                </div>
-            </div>
-
-        </section>
+        <WhySection />
 
         <section className="section section-luna">
             <div className="container__explained">
@@ -334,7 +295,7 @@ export default function Home() {
         </section>
 
         <section className="section section-easy">
-            <div className="container__explained">
+            <div className="container__explained easy">
                 <div className="explanation__first">
                     <h2>Easy Payment Options</h2>
                     <h3>
@@ -366,7 +327,7 @@ export default function Home() {
         </section>
 
         <section className="section section-flexible">
-            <div className="container__explained">
+            <div className="container__explained flexible">
                 <div className="explanation__first">
                     <h2>Flexible Scheduling for Your Convenience</h2>
                     <h3>Your appointment time is reserved just for you.</h3>

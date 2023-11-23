@@ -24,8 +24,31 @@ const faqData = [
             "following questions."
     },
     {
-        question: "Am I Depressed?",
-        answer: "yeah.."
+        question: "What is Depression?",
+        answer: "We have all felt sad or blue, and said something like, “I feel depressed!” Does that mean you are clinically depressed?\n" +
+            "It is normal to feel sad or low, sometimes. Feeling down is within the normal range of human emotions. " +
+            "During the course of a day, your mood can shift in intensity activation (alarmed/astonished) to " +
+            "deactivation (fatigued/tired); and can shift from pleasant (happy/contented) to unpleasant " +
+            "(distressed/sad). Being in a deactivated and unpleasant mood state does not necessarily qualify as " +
+            "“depression.” However, depression may be present when you stay stuck in this low deactivated unpleasant " +
+            "state. Someone struggling with depression is stuck not just for a few minutes or an hour or two, but is " +
+            "stuck in this mood state for most of day almost everyday, for weeks at a time, being unable to shake it, " +
+            "and being unable to return to the usual range of human emotions, and thus creating problems in " +
+            "relationships, school, and/or work."
+    },
+    {
+        question: "What are the symptoms and signs of depression?",
+        answer: "In addition to persistent sadness, some symptoms and signs of depression include:\n" +
+            "feeling useless, hopeless, or excessive guilt\n" +
+            "being irritable\n" +
+            "loss of interest or pleasure/withdrawal from activities/people, and resulting loneliness\n" +
+            "changes in appetite and weight\n" +
+            "lack of sleep or excessive sleep and fatigue\n" +
+            "feeling slow or lethargic\n" +
+            "trouble concentrating or making decisions\n" +
+            "crying easily or feeling like crying\n" +
+            "More acute symptoms to watch for include thoughts of suicide and/or a loss of touch with reality, such as hearing voices or having strange thoughts (delusions).\n" +
+            "A qualified mental health professional is needed to formally diagnose clinical depression, including clarification of the type of depression you are experiencing.\n"
     }
 ]
 const FAQSection = () => {
@@ -41,7 +64,7 @@ const FAQSection = () => {
 
     return (
         <section className="section section-faq">
-            <div className="container__explained">
+            <div className="container__explained faq">
                 <div className="explanation__first">
                     <h2>Frequently Asked Questions</h2>
                     <div className="accordion-list-container">
@@ -72,6 +95,21 @@ const FAQSection = () => {
                         </ul>
                     </div>
                 </div>
+                <button className="body-button">
+                    <span className="button-text">More FAQs</span>
+                    <span className="arrow-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                            <path
+                                fill="none"
+                                stroke="currentColor"
+                                strokeLinecap="square"
+                                strokeMiterlimit="10"
+                                strokeWidth="32"
+                                d="M112 244l144-144 144 144M256 120v292"
+                            />
+                        </svg>
+                    </span>
+                </button>
             </div>
         </section>
     );
