@@ -563,6 +563,29 @@ html[lang="es"] .lang-es a {
   }
 }
 
+.section-services {
+  display: flex;
+  height: 43vh;
+  width: 100%;
+  background-image: url("../../public/Bonanza-G.png");
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  overflow: hidden;
+}
+
+@media (min-width: 1025px) {
+  .section-services {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("../../public/Bonanza-G.png");
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+  }
+}
+
 .below-hero {
   display: flex;
   min-height: 57vh;
@@ -595,6 +618,58 @@ html[lang="es"] .lang-es a {
 
 @media (min-width: 1025px) {
   .title__hero{
+    max-width: 764px;
+  }
+}
+
+.container__services {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  padding: 5% 10%;
+  width: 100%;
+  max-width: 475px;
+}
+
+.container__services::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+}
+
+@media (min-width: 1025px) {
+  .container__services {
+    margin-right: auto;
+    padding: 5% 0;
+    margin-top: auto;
+    margin-left: 65px;
+    max-width: 80%;
+  }
+
+  .container__services::after {
+    height: 3px;
+  }
+}
+
+.title__services h1 {
+  color: white;
+  font-size: var(--font-lg);
+  margin: 0;
+}
+
+.title__services {
+  max-width: 292px;
+}
+
+@media (min-width: 1025px) {
+  .title__services h1 {
+    font-size: var(--font-xxl);
+  }
+
+  .title__services{
     max-width: 764px;
   }
 }

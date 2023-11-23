@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
+import Link from "next/link";
 
 const faqData = [
     {
@@ -22,6 +23,16 @@ const faqData = [
             "its severity, and how persistent or pervasive it is. To help determine " +
             "whether your anxiety is a problem to solve, consider your answer to the " +
             "following questions."
+    },
+    {
+        question: "Anxiety questions to ask yourself",
+        answer: "Does your anxiety:\n"+
+            "Constantly prevent you from performing normal day to day tasks?\n" +
+            "Often prevent you from obtaining a good night sleep?\n" +
+            "Rob you of the ability to concentrate, to relax, or to enjoy the moment?\n" +
+            "Inhibit or paralyze your functioning in important relationships?\n" +
+            "Stop you from reaching your goals?\n" +
+            "If you answered yes to one or more of the above, then you may benefit from at least an initial conversation with someone trained to recognize and treat your anxiety.\n"
     },
     {
         question: "What is Depression?",
@@ -95,21 +106,23 @@ const FAQSection = () => {
                         </ul>
                     </div>
                 </div>
-                <button className="body-button">
-                    <span className="button-text">More FAQs</span>
-                    <span className="arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="square"
-                                strokeMiterlimit="10"
-                                strokeWidth="32"
-                                d="M112 244l144-144 144 144M256 120v292"
-                            />
-                        </svg>
-                    </span>
-                </button>
+                <Link href="/faq">
+                    <button className="body-button">
+                        <span className="button-text">More FAQs</span>
+                        <span className="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeLinecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="32"
+                                    d="M112 244l144-144 144 144M256 120v292"
+                                />
+                            </svg>
+                        </span>
+                    </button>
+                </Link>
             </div>
         </section>
     );

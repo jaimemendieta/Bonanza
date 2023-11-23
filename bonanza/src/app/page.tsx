@@ -62,9 +62,10 @@ export default function Home() {
                     </p>
                 </div>
 
-                <button className="body-button">
-                    <span className="button-text">More Services</span>
-                    <span className="arrow-icon">
+                <Link href="/services">
+                    <button className="body-button">
+                        <span className="button-text">More Services</span>
+                        <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
                                 fill="none"
@@ -76,7 +77,8 @@ export default function Home() {
                             />
                         </svg>
                     </span>
-                </button>
+                    </button>
+                </Link>
 
                 <button className="body-button">
                     <span className="button-text">Learn More</span>
@@ -183,9 +185,10 @@ export default function Home() {
                     </p>
                 </div>
 
-                <button className="body-button">
-                    <span className="button-text">Contact Us</span>
-                    <span className="arrow-icon">
+                <Link href="/contact">
+                    <button className="body-button">
+                        <span className="button-text">Contact Us</span>
+                        <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
                                 fill="none"
@@ -197,7 +200,8 @@ export default function Home() {
                             />
                         </svg>
                     </span>
-                </button>
+                    </button>
+                </Link>
 
                 <button className="body-button">
                     <span className="button-text">Book Appointment</span>
@@ -273,21 +277,23 @@ export default function Home() {
                         please don't hesitate to contact us.
                     </p>
 
-                    <button className="body-button">
-                        <span className="button-text">Contact Us</span>
-                        <span className="arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="square"
-                                strokeMiterlimit="10"
-                                strokeWidth="32"
-                                d="M112 244l144-144 144 144M256 120v292"
-                            />
-                        </svg>
-                    </span>
-                    </button>
+                    <Link href="/contact">
+                        <button className="body-button">
+                            <span className="button-text">Contact Us</span>
+                            <span className="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeLinecap="square"
+                                        strokeMiterlimit="10"
+                                        strokeWidth="32"
+                                        d="M112 244l144-144 144 144M256 120v292"
+                                    />
+                                </svg>
+                            </span>
+                        </button>
+                    </Link>
                 </div>
             </div>
             <div className="image__explained">
