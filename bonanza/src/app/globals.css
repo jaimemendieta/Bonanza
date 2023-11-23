@@ -1082,3 +1082,23 @@ summary {
   color: var(--main-background);
   translate: -1.5em;
 }
+
+
+
+/*About Page*/
+.section-other .container__explained {
+  padding-top: 55px;
+}
+
+h4 {
+  color: var(--main-foreground);
+}
+h4::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--main-foreground);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}

@@ -17,6 +17,7 @@ import BonanzaVert from "../../public/bonanza-vertical-combination-mark.svg";
 import Hero from "@/components/Hero";
 import WhySection from "@/components/WhySection";
 import FAQSection from "@/components/FAQSection";
+import ReadySection from "@/components/ReadySection";
 import Link from "next/link";
 
 export default function Home() {
@@ -374,22 +375,8 @@ export default function Home() {
         </section>
 
         <FAQSection />
+        <ReadySection />
 
-        <section className="section section-ready">
-            <div className="container__explained">
-                <div className="explanation">
-                    <h2>Ready to Begin Your Journey?</h2>
-                    <p>
-                        Discover the transformative power of EMDR therapy with Bonanza. Schedule your free 15-minute
-                        consultation and take the first step towards healing and renewal.
-                    </p>
-                </div>
-                <button className="page-button">Book Your Free Consultation</button>
-            </div>
-            <div className="image__explained">
-                <Image src={BonanzaImageG} alt="Scenic Image G"/>
-            </div>
-        </section>
     </main>
   )
 }
