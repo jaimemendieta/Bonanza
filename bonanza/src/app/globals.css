@@ -115,6 +115,15 @@ em {
   font-style: normal;
 }
 
+.screen_reader_title {
+  display: block;
+  margin: 0!important;
+  padding: 0!important;
+  text-indent: -9999px;
+  width: 0!important;
+  overflow:hidden;
+}
+
 .plist {
   margin-bottom: 12px;
 }
@@ -1175,5 +1184,61 @@ h4::after {
   width: 100%;
   background-color: var(--main-foreground);
   margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/*Contact Page*/
+.section-contact h1, .section-contact h3 {
+  color: var(--main-foreground);
+}
+
+.section-contact h3 {
+  font-size: var(--font-xs);
+  font-weight: 300;
+}
+input, select, textarea {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  min-inline-size: 100%;
+}
+
+.el-input--content {
+  border-bottom: 1px solid var(--main-foreground);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+.form-wrapper {
+  width: 80%;
+}
+
+.t-container {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.t-cell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.t-cell:last-of-type {
+  flex-grow: 1;
+  padding-right: 0;
+}
+
+.t-cell:first-of-type {
+  padding-left: 0;
+}
+
+.el-group {
   margin-bottom: 30px;
 }
