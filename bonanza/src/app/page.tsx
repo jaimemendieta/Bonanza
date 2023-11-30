@@ -312,7 +312,7 @@ export default function Home() {
                         <em>Cash:</em> Direct payments can be made during your session
                     </p>
                     <p className="plist">
-                        <em>Check:</em> Kindly ensure checks are made payable to "Giannina Fuentes"
+                        <em>Check:</em> Kindly ensure checks are made payable to "Bonanza Counseling Services"
                     </p>
                     <p className="plist">
                         <em>Credit Cards:</em> We accept all major credit cards, including HSA. Secure transactions

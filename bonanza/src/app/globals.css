@@ -10,6 +10,7 @@
   --font-xxxs: 0.334em; /*5.35pt*/
   --font-xxs: 0.541em; /*8.65pt*/
   --font-xs: 0.875em; /*14pt*/
+  --font-mobile-sm: 1.2em;
   --font-sm: 1.416em; /*22.66pt*/
   --font-med: 2.291em; /*36.66pt*/
   --font-lg: 3.708em; /*59.32pt*/
@@ -1288,6 +1289,10 @@ input:focus, textarea:focus, select:focus {
   margin-bottom: 1em;
 }
 
+.infobox-subtitle.no-margin {
+  margin: 0;
+}
+
 .infobox-heading {
   font-size: var(--font-sm);
   font-weight: 500;
@@ -1305,7 +1310,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .infobox-paragraph li {
-  font-size: 1.2em;
+  font-size: var(--font-mobile-sm);
   color: var(--main-foreground);
   line-height: 2;
 }
@@ -1315,7 +1320,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .infobox-paragraph p {
-  font-size: 1.2em;
+  font-size: var(--font-mobile-sm);
 }
 
 .infobox-paragraph p:last-child {
@@ -1324,7 +1329,7 @@ input:focus, textarea:focus, select:focus {
 
 .minimal-button {
   position: relative;
-  font-size: 1.2em;
+  font-size: var(--font-mobile-sm);
   font-weight: 500;
   color: var(--main-foreground);
   border-radius: 50px;
