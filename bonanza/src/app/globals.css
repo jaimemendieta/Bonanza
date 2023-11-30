@@ -1188,11 +1188,11 @@ h4::after {
 }
 
 /*Contact Page*/
-.section-contact h1, .section-contact h3 {
+.section-other h1, .section-other h3 {
   color: var(--main-foreground);
 }
 
-.section-contact h3 {
+.section-other h3 {
   font-size: var(--font-xs);
   font-weight: 300;
 }
@@ -1241,4 +1241,103 @@ input:focus, textarea:focus, select:focus {
 
 .el-group {
   margin-bottom: 30px;
+}
+
+/*Services*/
+.services-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 33vh;
+  padding-top: 44px;
+}
+
+.container__infobox {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.number::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--main-foreground);
+  margin-bottom: .2em;
+}
+
+.number {
+  font-weight: 300;
+  font-size: var(--font-sm);
+  color: var(--main-foreground);
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.infobox-title {
+  font-weight: 500;
+  font-size: var(--font-lg);
+  color: var(--main-foreground);
+  margin-bottom: .2em;
+}
+
+.infobox-subtitle {
+  font-size: var(--font-sm);
+  color: var(--main-foreground);
+  line-height: 1.4;
+  margin-bottom: 1em;
+}
+
+.infobox-heading {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--main-foreground);
+}
+
+.infobox-heading::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background-color: var(--main-foreground);
+  margin-top: .3em;
+  margin-bottom: 1em;
+}
+
+.infobox-paragraph li {
+  font-size: 1.2em;
+  color: var(--main-foreground);
+  line-height: 2;
+}
+
+.infobox-paragraph li:last-child {
+  margin-bottom: 1em;
+}
+
+.infobox-paragraph p {
+  font-size: 1.2em;
+}
+
+.infobox-paragraph p:last-child {
+  margin-bottom: 2em;
+}
+
+.minimal-button {
+  position: relative;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--main-foreground);
+  border-radius: 50px;
+  padding: 13px 26px;
+  margin-bottom: 44px;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  border: 1px solid var(--main-foreground);
+  transition: background-color .3s;
+}
+
+.minimal-button:hover {
+  background-color: var(--main-foreground);
+  color: var(--main-background);
 }

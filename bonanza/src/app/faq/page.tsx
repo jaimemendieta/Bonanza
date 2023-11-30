@@ -131,10 +131,10 @@ const Page = () => {
 
     return (
         <main>
-            <section className="section section-faq">
+            <section className="section section-other">
                 <div className="container__explained faq">
                     <div className="explanation__first">
-                        <h2>Find answers to your questions here</h2>
+                        <h1>Find answers to your questions here</h1>
                         <h3>
                             This is the place where you can find the most common questions quickly answered, if for
                             some reason your question is not here, feel free to contact us.
