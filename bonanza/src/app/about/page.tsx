@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import Giannina from "../../../public/Giannina-1.png";
+import Giannina from "../../../public/Giannina-2.jpg";
 import ReadySection from "@/components/ReadySection";
 
 const Page = () => {

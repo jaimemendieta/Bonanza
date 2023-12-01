@@ -55,7 +55,7 @@ const Page = () => {
                             </div>
                         </div>
 
-                        <button className=" el-group header-button" type="submit">Submit</button>
+                        <button className=" el-group minimal-button" type="submit">Submit</button>
                     </form>
                 </div>
 

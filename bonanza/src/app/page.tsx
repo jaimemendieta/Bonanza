@@ -5,7 +5,6 @@ import BonanzaImageC from "../../public/Bonanza-C.png";
 import BonanzaImageD from "../../public/Bonanza-D.png";
 import BonanzaImageG from "../../public/Bonanza-G.png";
 import BonanzaImageH from "../../public/Bonanza-H.png";
-import Giannina from "../../public/Giannina-1.png";
 import Luna from "../../public/Luna.png";
 import Parquet from "../../public/parquet.png";
 import Earth from "../../public/earth-pattern.png";
