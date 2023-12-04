@@ -47,6 +47,12 @@ h1 {
   margin-bottom: 8px;
 }
 
+@media (min-width: 800px) {
+  h1 {
+    font-size: var(--font-lg);
+  }
+}
+
 @media (min-width: 1600px) {
   h1 {
     font-size: var(--font-xl);
@@ -99,6 +105,12 @@ p {
   font-weight: 300;
   color: var(--main-foreground);
   margin-bottom: 24px;
+}
+
+@media (min-width: 800px) {
+  p {
+    font-size: var(--font-mobile-sm);
+  }
 }
 
 @media (min-width: 1600px) {
@@ -605,11 +617,16 @@ html[lang="es"] .lang-es a {
 
 .container__hero {
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 15% 10%;
+  margin-left: 10%;
+  margin-right: 10%;
   width: 100%;
   max-width: 475px;
+}
+
+@media (min-width: 800px) {
+  .container__hero {
+    max-width: 860px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -622,8 +639,18 @@ html[lang="es"] .lang-es a {
   }
 }
 
+.container__hero .page-button {
+  margin-bottom: 0;
+}
+
 .title__hero {
   max-width: 292px;
+}
+
+@media (min-width: 800px) {
+  .title__hero {
+    max-width: 600px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -788,7 +815,7 @@ html[lang="es"] .lang-es a {
 
 .image__explained {
   display: flex;
-  height: 33vh;
+  height: 50vh;
   margin-left: auto;
 }
 
