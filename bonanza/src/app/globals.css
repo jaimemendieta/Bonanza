@@ -589,7 +589,7 @@ html[lang="es"] .lang-es a {
   display: flex;
   height: 43vh;
   width: 100%;
-  background-image: url("../../public/Bonanza-G.png");
+  background-image: url("../../public/Bonanza-G.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
@@ -601,7 +601,7 @@ html[lang="es"] .lang-es a {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background-image: url("../../public/Bonanza-G.png");
+    background-image: url("../../public/Bonanza-G.jpg");
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
@@ -619,6 +619,7 @@ html[lang="es"] .lang-es a {
   position: relative;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 15% 0;
   width: 100%;
   max-width: 475px;
 }
@@ -815,7 +816,7 @@ html[lang="es"] .lang-es a {
 
 .image__explained {
   display: flex;
-  height: 50vh;
+  min-height: 50vh;
   margin-left: auto;
 }
 
@@ -829,7 +830,7 @@ html[lang="es"] .lang-es a {
 
 .image__giannina {
   display: flex;
-  height: 54vh;
+  min-height: 54vh;
   margin-bottom: 16px;
   margin-top: 16px;
 }
@@ -1149,6 +1150,7 @@ summary {
 
 .accordion_title {
   transition: translate .45s cubic-bezier(.23,1,.32,1), color .3s;
+  max-width: 65%;
 }
 
 .accordion_icon {
@@ -1195,6 +1197,9 @@ summary {
   translate: -1.5em;
 }
 
+.accordion_content {
+  padding-top: 5%;
+}
 
 
 /*About Page*/

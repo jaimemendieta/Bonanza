@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link';
 import {useEffect, useState} from "react";
+import HorizontalLogo from "../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
 
 const MobileHeader = () => {
@@ -42,7 +43,7 @@ const MobileHeader = () => {
                     <Link href="/" className="logo-link">
                         <Image
                             className="logo-header"
-                            src="/bonanza-horizontal-combination-mark.svg"
+                            src={HorizontalLogo}
                             alt="Bonanza Logo"
                         />
                     </Link>
@@ -66,7 +67,7 @@ const MobileHeader = () => {
                     <div className="logo-container">
                         <Image
                             className="logo-menu"
-                            src="/bonanza-horizontal-combination-mark.svg"
+                            src={HorizontalLogo}
                             alt="Bonanza Logo"
                         />
                     </div>

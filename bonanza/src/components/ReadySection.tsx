@@ -1,5 +1,5 @@
 import Image from "next/image";
-import BonanzaImageG from "../../public/Bonanza-G.png";
+import BonanzaImageG from "../../public/Bonanza-G.jpg";
 
 const ReadySection = () => {
     return (

@@ -3,7 +3,7 @@ import BonanzaImageA from "../../public/Bonanza-A.png";
 import BonanzaImageB from "../../public/Bonanza-B.png";
 import BonanzaImageC from "../../public/Bonanza-C.png";
 import BonanzaImageD from "../../public/Bonanza-D.png";
-import BonanzaImageG from "../../public/Bonanza-G.png";
+import BonanzaImageG from "../../public/Bonanza-G.jpg";
 import BonanzaImageH from "../../public/Bonanza-H.png";
 import Luna from "../../public/Luna.png";
 import Parquet from "../../public/parquet.png";

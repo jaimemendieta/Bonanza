@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {useEffect, useState} from "react";
 import MobileHeader from "@/components/MobileHeader";
 import LanguageIcon from "../../public/language.svg";
+import HorizontalLogo from "../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
 
 const Header = () => {
@@ -68,7 +69,7 @@ const Header = () => {
                     <nav className="navigation">
                         <Link href="/" className="logo-link">
                             <Image className="logo-header"
-                                 src="/bonanza-horizontal-combination-mark.svg"
+                                 src={HorizontalLogo}
                                  alt="Bonanza Logo"/>
                         </Link>
                         <Link href="/about">About</Link>
@@ -84,7 +85,7 @@ const Header = () => {
                             onMouseLeave={handleMouseLeave}
                         >
                             <Image className={`language-icon-header ${hovered ? 'visible' : ''}`}
-                                 src="/language.svg"
+                                 src={LanguageIcon}
                                  alt="Language Icon"/>
                             <div
                                 className={`language-header-translation ${hovered ? 'visible' : ''}`}
