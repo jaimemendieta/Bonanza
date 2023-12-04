@@ -37,9 +37,9 @@ const WhySection = () => {
 
                             <h3>Meet Giannina Fuentes, LCSW - The Heart of Bonanza</h3>
                             <p>
-                                Giannina Fuentes is not just another therapist; she's a beacon of hope, a testament to
+                                Giannina Fuentes is not just another therapist; she&apos;s a beacon of hope, a testament to
                                 dedication, and the guiding light of Bonanza. With a strong academic foundation from the
-                                University of Utah, holding both a Bachelor's Degree in Psychology and a Master's Degree in
+                                University of Utah, holding both a Bachelor&apos;s Degree in Psychology and a Master&apos;s Degree in
                                 Social Work, she is a decorated mental health professional.
                             </p>
                         </div>
@@ -55,7 +55,7 @@ const WhySection = () => {
                                 violence, anxiety, depression, stress, and relationship struggles.
                             </p>
                             <p>
-                                <em>Commitment to Children:</em> Giannina's unwavering dedication shines through her work as a child
+                                <em>Commitment to Children:</em> Giannina&apos;s unwavering dedication shines through her work as a child
                                 welfare worker for the Division of Child and Family Services, ensuring the welfare of children
                                 and families.
                             </p>
@@ -81,9 +81,9 @@ const WhySection = () => {
 
                                 <h3>Meet Giannina Fuentes, LCSW - The Heart of Bonanza</h3>
                                 <p>
-                                    Giannina Fuentes is not just another therapist; she's a beacon of hope, a testament to
+                                    Giannina Fuentes is not just another therapist; she&apos;s a beacon of hope, a testament to
                                     dedication, and the guiding light of Bonanza. With a strong academic foundation from the
-                                    University of Utah, holding both a Bachelor's Degree in Psychology and a Master's Degree in
+                                    University of Utah, holding both a Bachelor&apos;s Degree in Psychology and a Master&apos;s Degree in
                                     Social Work, she is a decorated mental health professional.
                                 </p>
                             </div>
@@ -99,7 +99,7 @@ const WhySection = () => {
                                     violence, anxiety, depression, stress, and relationship struggles.
                                 </p>
                                 <p>
-                                    <em>Commitment to Children:</em> Giannina's unwavering dedication shines through her work as a child
+                                    <em>Commitment to Children:</em> Giannina&apos;s unwavering dedication shines through her work as a child
                                     welfare worker for the Division of Child and Family Services, ensuring the welfare of children
                                     and families.
                                 </p>

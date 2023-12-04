@@ -140,7 +140,7 @@ export default function Home() {
                     </p>
 
                     <p>
-                        Choose Bonanza, and you're not just choosing therapy; you're choosing a sanctuary of
+                        Choose Bonanza, and you&apos;re not just choosing therapy; you&apos;re choosing a sanctuary of
                         understanding, expertise, and compassionate care. Your journey to healing and renewal begins
                         here.
                     </p>
@@ -222,7 +222,7 @@ export default function Home() {
                     <h3>Insurance Information:</h3>
                     <p>
                         Understanding your insurance benefits is crucial. While many insurance providers or employee
-                        benefit plans might cover our services either in full or in part, it's essential to confirm the
+                        benefit plans might cover our services either in full or in part, it&apos;s essential to confirm the
                         specifics with your provider.
                     </p>
                 </div>
@@ -251,8 +251,8 @@ export default function Home() {
                         <div className="container question">
                             <h3>Session Limitations</h3>
                             <p>
-                                Does my plan limit the number of sessions I can have per calendar year? If so, what's
-                                the limit?
+                                Does my plan limit the number of sessions I can have per calendar year? If so,
+                                what&apos;s the limit?
                             </p>
                         </div>
 
@@ -266,14 +266,14 @@ export default function Home() {
                     </div>
 
                     <p>
-                        We advise you to reach out to your insurance provider to ensure you're well-informed about your
-                        benefits and coverage options.
+                        We advise you to reach out to your insurance provider to ensure you&apos;re well-informed about
+                        your benefits and coverage options.
                     </p>
 
                     <p>
                         Remember, investing in mental health is invaluable. We aim to make the process as transparent
                         and straightforward as possible for you. If you have any questions or need clarification,
-                        please don't hesitate to contact us.
+                        please don&apos;t hesitate to contact us.
                     </p>
 
                     <Link href="/contact">
@@ -305,13 +305,13 @@ export default function Home() {
                 <div className="explanation__first">
                     <h2>Easy Payment Options</h2>
                     <h3>
-                        We strive to make the payment process as seamless as possible for you. Here's how you can
+                        We strive to make the payment process as seamless as possible for you. Here&apos;s how you can
                         settle your sessions with us:</h3>
                     <p className="plist">
                         <em>Cash:</em> Direct payments can be made during your session
                     </p>
                     <p className="plist">
-                        <em>Check:</em> Kindly ensure checks are made payable to "Bonanza Counseling Services"
+                        <em>Check:</em> Kindly ensure checks are made payable to &quot;Bonanza Counseling Services&quot;
                     </p>
                     <p className="plist">
                         <em>Credit Cards:</em> We accept all major credit cards, including HSA. Secure transactions

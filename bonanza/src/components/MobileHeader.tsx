@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link';
 import {useEffect, useState} from "react";
+import Image from "next/image";
 
 const MobileHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -39,7 +40,7 @@ const MobileHeader = () => {
             <div className="mobile-header-content">
                 <div className="mobile-header-left">
                     <Link href="/" className="logo-link">
-                        <img
+                        <Image
                             className="logo-header"
                             src="/bonanza-horizontal-combination-mark.svg"
                             alt="Bonanza Logo"
@@ -63,7 +64,7 @@ const MobileHeader = () => {
 
                 <nav className="innermenu container relative">
                     <div className="logo-container">
-                        <img
+                        <Image
                             className="logo-menu"
                             src="/bonanza-horizontal-combination-mark.svg"
                             alt="Bonanza Logo"

@@ -2,6 +2,8 @@
 import Link from 'next/link';
 import {useEffect, useState} from "react";
 import MobileHeader from "@/components/MobileHeader";
+import LanguageIcon from "../../public/language.svg";
+import Image from "next/image";
 
 const Header = () => {
     const [hovered, setHovered] = useState(false);
@@ -65,7 +67,7 @@ const Header = () => {
                 <header className={`app-header ${visible ? "visible" : "hidden"}`}>
                     <nav className="navigation">
                         <Link href="/" className="logo-link">
-                            <img className="logo-header"
+                            <Image className="logo-header"
                                  src="/bonanza-horizontal-combination-mark.svg"
                                  alt="Bonanza Logo"/>
                         </Link>
@@ -81,7 +83,7 @@ const Header = () => {
                             onMouseEnter={handleMouseEnter}
                             onMouseLeave={handleMouseLeave}
                         >
-                            <img className={`language-icon-header ${hovered ? 'visible' : ''}`}
+                            <Image className={`language-icon-header ${hovered ? 'visible' : ''}`}
                                  src="/language.svg"
                                  alt="Language Icon"/>
                             <div

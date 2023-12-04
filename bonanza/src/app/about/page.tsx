@@ -27,7 +27,7 @@ const Page = () => {
                         <h3>Giannina Fuentes</h3>
                         <h4>Licensed Clinical Social Worker</h4>
                         <p>
-                            Giannina Fuentes stands out as a dedicated mental health professional, holding a bachelor's degree in Psychology and a master's degree in Social Work from the prestigious University of Utah.
+                            Giannina Fuentes stands out as a dedicated mental health professional, holding a bachelor&apos;s degree in Psychology and a master&apos;s degree in Social Work from the prestigious University of Utah.
                         </p>
                         <p>
                             With a rich tapestry of experience:
