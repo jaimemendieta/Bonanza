@@ -9,7 +9,7 @@ const WhySection = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsLargeScreen(window.innerWidth > 1024);
+            setIsLargeScreen(window.innerWidth > 1280);
         };
 
         handleResize();
