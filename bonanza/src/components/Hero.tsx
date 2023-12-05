@@ -34,7 +34,7 @@ const Hero = () => {
                         <div className="paragraph__hero__2">
                             <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
                         </div>
-                        <button className="page-button">SCHEDULE APPOINTMENT</button>
+                        <button className="page-button">Schedule Appointment</button>
                     </div>
                 </section>
             ) : (
@@ -53,7 +53,7 @@ const Hero = () => {
                             <div className="paragraph__hero__2">
                                 <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
                             </div>
-                            <button className="page-button">SCHEDULE APPOINTMENT</button>
+                            <button className="page-button">Schedule Appointment</button>
                         </div>
                     </div>
                 </>

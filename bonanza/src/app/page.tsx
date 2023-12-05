@@ -3,8 +3,7 @@ import BonanzaImageA from "../../public/Bonanza-A.jpg";
 import BonanzaImageB from "../../public/Bonanza-B.jpg";
 import BonanzaImageC from "../../public/Bonanza-C.jpg";
 import BonanzaImageD from "../../public/Bonanza-D.jpg";
-import BonanzaImageG from "../../public/Bonanza-G.jpg";
-import BonanzaImageH from "../../public/Bonanza-H.png";
+import BonanzaImageH from "../../public/Bonanza-H.jpg";
 import Luna from "../../public/Luna.jpg";
 import Parquet from "../../public/parquet.png";
 import Earth from "../../public/earth-pattern.png";
@@ -162,7 +161,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className="image__explained">
+            <div className="image__explained center">
                 <Image src={Luna} alt="Image of Vizsla"/>
             </div>
         </section>
@@ -295,7 +294,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
-            <div className="image__explained">
+            <div className="image__explained center">
                 <Image src={BonanzaImageB} alt="Scenic Image B"/>
             </div>
         </section>
@@ -374,7 +373,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
-            <div className="image__explained">
+            <div className="image__explained center">
                 <Image src={BonanzaImageD} alt="Scenic Image D"/>
             </div>
         </section>

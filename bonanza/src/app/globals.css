@@ -641,7 +641,7 @@ html[lang="es"] .lang-es a {
     padding: 0;
     margin-top: 204px;
     margin-left: 65px;
-    max-width: 764px;
+    max-width: 567px;
   }
 }
 
@@ -800,7 +800,15 @@ html[lang="es"] .lang-es a {
     padding-top: 44px;
     margin-right: 62px;
     margin-left: auto;
-    max-width: 1041px;
+    max-width: 615px;
+  }
+
+  .section-contact .container__explained {
+    margin-left: 10%;
+    margin-top: 44px;
+    padding-top: 22px;
+    padding-right: 10%;
+    max-width: 860px;
   }
 
   .container__explained.easy, .container__explained.flexible {
@@ -819,12 +827,6 @@ html[lang="es"] .lang-es a {
     width: 50%;
   }
 
-  @media (min-width: 800px) {
-    .section-faq .explanation__first {
-      width: 750px;
-    }
-  }
-
   .section-flexible .image__explained, .section-luna .image__explained {
     width: auto;
   }
@@ -834,9 +836,32 @@ html[lang="es"] .lang-es a {
   }
 }
 
+@media (min-width: 1920px) {
+  .container__explained {
+    padding-right: 0;
+    padding-left: 65px;
+    padding-top: 44px;
+    margin-right: 62px;
+    margin-left: auto;
+    max-width: 1041px;
+  }
+}
+
+@media (min-width: 800px) {
+  .section-faq .explanation__first {
+    width: 750px;
+  }
+}
+
 .explanation__first {
   margin-top: 44px;
   margin-bottom: 44px;
+}
+
+@media (min-width: 1280px) {
+  .explanation__first h3 {
+    margin-bottom: 1.3em;
+  }
 }
 
 .explanation {
@@ -879,6 +904,15 @@ html[lang="es"] .lang-es a {
 
 .image__explained img {
   object-fit: cover;
+  object-position: left;
+}
+
+.image__explained.center img {
+  object-position: center;
+}
+
+.image__explained.right img {
+  object-position: right;
 }
 
 .image__giannina img {
@@ -891,6 +925,21 @@ html[lang="es"] .lang-es a {
   max-width: 100%;
   align-content: center;
   align-items: center;
+}
+
+.container.question {
+  background-color: white;
+  margin: 30px;
+  padding: 80px 36px;
+  text-align: center;
+}
+
+.container.question h3 {
+  font-size: 1.1em;
+}
+
+.container.question p {
+  font-size: 1.1em;
 }
 
 @media (min-width: 1025px) {
@@ -919,19 +968,29 @@ html[lang="es"] .lang-es a {
   }
 }
 
-.container.question {
-  background-color: white;
-  margin: 30px;
-  padding: 80px 36px;
-  text-align: center;
-}
+@media (min-width: 1280px) {
+  .container__questions {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    align-content: center;
+    align-items: center;
+  }
 
-.container.question h3 {
-  font-size: 1.1em;
-}
+  .container.question {
+    background-color: white;
+    margin: 30px;
+    padding: 80px 36px;
+    text-align: center;
+  }
 
-.container.question p {
-  font-size: 1.1em;
+  .container.question h3 {
+    font-size: 1.1em;
+  }
+
+  .container.question p {
+    font-size: 1.1em;
+  }
 }
 
 .footer {
@@ -1037,10 +1096,32 @@ html[lang="es"] .lang-es a {
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1024px) {
   .logo__background {
     height: 80%;
     width: 30%;
+    background-size: 434%;
+    background-position-x: -671px;
+    background-position-y: -226px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .logo__background {
+    background-position-x: -819px;
+    background-position-y: -275px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .logo__background {
+    background-position-x: -832px;
+    background-position-y: -279px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .logo__background {
     background-size: 450%;
     background-position-x: -1295px;
     background-position-y: -420px;
@@ -1260,6 +1341,7 @@ summary {
 h4 {
   color: var(--main-foreground);
 }
+
 h4::after {
   content: "";
   display: block;
@@ -1271,6 +1353,13 @@ h4::after {
 }
 
 /*Contact Page*/
+@media (min-width: 1280px) {
+  .section-contact {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 .section-other h1, .section-other h3 {
   color: var(--main-foreground);
 }
@@ -1279,6 +1368,7 @@ h4::after {
   font-size: var(--font-xs);
   font-weight: 300;
 }
+
 input, select, textarea {
   border: none;
   margin: 0;

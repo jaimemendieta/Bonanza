@@ -23,7 +23,7 @@ const Header = () => {
     };
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 1220px)');
+        const mediaQuery = window.matchMedia('(max-width: 1279px)');
 
         const handleMediaQueryChange = (e: MediaQueryListEvent) => {
             setIsMobileView(e.matches);
