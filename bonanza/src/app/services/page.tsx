@@ -5,7 +5,7 @@ import ServiceD from "../../../public/ServiceD.png";
 import ServiceE from "../../../public/ServiceE.png";
 import ServiceF from "../../../public/ServiceF.png";
 import ServiceG from "../../../public/ServiceG.png";
-import ServiceH from "../../../public/Luna.png";
+import ServiceH from "../../../public/Luna.jpg";
 
 import Image, {StaticImageData} from "next/image";
 
