@@ -11,6 +11,7 @@ const Header = () => {
     const [isMobileView, setIsMobileView] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [bgColor, setBgColor] = useState(false);
 
 
     const handleMouseEnter = () => {
@@ -49,6 +50,12 @@ const Header = () => {
                 setVisible(true);
             }
 
+            if (currentScrollPos >= 90) {
+                setBgColor(true);
+            } else {
+                setBgColor(false);
+            }
+
             setPrevScrollPos(currentScrollPos);
         };
 
@@ -65,7 +72,7 @@ const Header = () => {
             {isMobileView ? (
                 <MobileHeader />
             ) : (
-                <header className={`app-header ${visible ? "visible" : "hidden"}`}>
+                <header className={`app-header ${visible ? "visible" : "hidden"} ${bgColor ? 'bg-color' : ''}`}>
                     <nav className="navigation">
                         <Link href="/" className="logo-link">
                             <Image className="logo-header"

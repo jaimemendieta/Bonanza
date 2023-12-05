@@ -169,11 +169,11 @@ em {
   font-size: 0.875em;
   font-weight: 500;
   color: var(--main-foreground);
-  transition: top 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .app-header.hidden {
-  top: -100px;
+  top: -120px;
 }
 
 .mobile-header {
@@ -184,7 +184,7 @@ em {
   width: 100%;
   padding: 10px 30px;
   z-index: 99;
-  transition: top 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .mobile-header.hidden {
@@ -204,6 +204,11 @@ em {
 
 .language-text {
   font-size: var(--font-xs);
+}
+
+.bg-color {
+  background-color: rgb(255, 255, 255, .3);
+  backdrop-filter: blur(20px);
 }
 
 /* Mobile Menu Button */

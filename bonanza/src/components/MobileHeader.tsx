@@ -8,6 +8,7 @@ const MobileHeader = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
+    const [bgColor, setBgColor] = useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -25,6 +26,12 @@ const MobileHeader = () => {
                 setVisible(true);
             }
 
+            if (currentScrollPos >= 90) {
+                setBgColor(true);
+            } else {
+                setBgColor(false);
+            }
+
             setPrevScrollPos(currentScrollPos);
         };
 
@@ -37,7 +44,7 @@ const MobileHeader = () => {
     }, [prevScrollPos]);
 
     return (
-        <header className={`app-header mobile-header ${menuOpen ? 'menu-open' : ''} ${visible ? "visible" : "hidden"}`}>
+        <header className={`app-header mobile-header ${menuOpen ? 'menu-open' : ''} ${visible ? "visible" : "hidden"} ${bgColor ? 'bg-color' : ''}`}>
             <div className="mobile-header-content">
                 <div className="mobile-header-left">
                     <Link href="/" className="logo-link">
