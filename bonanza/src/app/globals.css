@@ -675,6 +675,12 @@ html[lang="es"] .lang-es a {
   max-width: 475px;
 }
 
+@media (min-width: 500px) {
+  .container__services {
+    max-width: none;
+  }
+}
+
 .container__services::after {
   content: "";
   display: block;
@@ -704,7 +710,19 @@ html[lang="es"] .lang-es a {
 }
 
 .title__services {
-  max-width: 292px;
+  width: fit-content;
+}
+
+@media (min-width: 500px) {
+  .title__services h1 {
+    font-size: var(--font-xl);
+  }
+}
+
+@media (min-width: 800px) {
+  .title__services h1 {
+    font-size: var(--font-xxl);
+  }
 }
 
 @media (min-width: 1025px) {
@@ -799,6 +817,16 @@ html[lang="es"] .lang-es a {
     margin-left: 0;
     margin-right: auto;
     width: 50%;
+  }
+
+  @media (min-width: 800px) {
+    .section-faq .explanation__first {
+      width: 750px;
+    }
+  }
+
+  .special-div {
+    background-color: red;
   }
 
   .section-flexible .image__explained, .section-luna .image__explained {
@@ -1071,6 +1099,25 @@ summary {
   position: relative;
 }
 
+@media (min-width: 600px) {
+  .accordion-list-container {
+    width: 488px;
+  }
+}
+
+@media (min-width: 800px) {
+  .accordion-list-container {
+    width: 640px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .accordion-list-container {
+    width: 750px;
+  }
+}
+
+
 .accordion-list_item {
 
 }
@@ -1154,6 +1201,8 @@ summary {
 }
 
 .accordion_title {
+  color: var(--main-foreground);
+  font-size: var(--font-mobile-sm);
   transition: translate .45s cubic-bezier(.23,1,.32,1), color .3s;
   max-width: 65%;
 }
@@ -1245,6 +1294,7 @@ input, select, textarea {
 }
 
 .el-input--content {
+  color: var(--main-foreground);
   border-bottom: 1px solid var(--main-foreground);
 }
 
