@@ -6,7 +6,7 @@ import ReadySection from "@/components/ReadySection";
 const Page = () => {
     return (
         <main>
-            <section className="section section-other">
+            <section className="section section-other about">
                 <div className="container__explained">
                     <div className="explanation__first">
                         <h2>What is Bonanza?</h2>

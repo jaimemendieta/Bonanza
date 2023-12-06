@@ -1334,6 +1334,32 @@ summary {
 
 
 /*About Page*/
+@media (min-width: 1280px) {
+  .section-other.about {
+    flex-direction: column;
+    min-height: fit-content;
+  }
+
+  .about .container__explained {
+    margin-right: auto;
+    padding-left: 0;
+    max-width: 800px;
+  }
+
+  .section-founder .container__explained {
+    padding-left: 0;
+    margin-right: auto;
+    max-width: 800px;
+  }
+
+  .section-founder h3 {
+    margin-top: 1em;
+  }
+}
+
+
+
+
 .section-other .container__explained {
   padding-top: 55px;
 }

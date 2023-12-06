@@ -7,7 +7,7 @@ const Page = () => {
                 <div className="container__explained">
                     <div className="explanation__first">
                         <h1>I&apos;m available! Let&apos;s talk</h1>
-                        <h3>Reach out and I&apos;ll get back to you within 24 hours.</h3>
+                        <h3>Reach out and I&apos;ll get back to you within 3 days.</h3>
                     </div>
                 </div>
 
