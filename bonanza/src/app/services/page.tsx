@@ -2,7 +2,7 @@ import ServiceA from "../../../public/ServiceA.png";
 import ServiceB from "../../../public/ServiceB.png";
 import ServiceC from "../../../public/ServiceC.png";
 import ServiceD from "../../../public/ServiceD.png";
-import ServiceE from "../../../public/ServiceE.png";
+import ServiceE from "../../../public/ServiceE.jpg";
 import ServiceF from "../../../public/ServiceF.png";
 import ServiceG from "../../../public/ServiceG.png";
 import ServiceH from "../../../public/Luna.jpg";
@@ -119,7 +119,7 @@ const Page = () => {
             </section>
 
             {services.map((service, index) => (
-            <section key={service.id} className="section services-content">
+            <section key={service.id} className={`section services-content ${index % 2 === 0 ? '' : 'reverse'}`}>
                 <div className="container__infobox">
                     <div className="number">
                         {String(index + 1).padStart(2, '0')}/

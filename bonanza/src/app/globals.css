@@ -569,13 +569,19 @@ html[lang="es"] .lang-es a {
  */
 .section-hero {
   display: flex;
-  height: 43vh;
+  height: 55vh;
   width: 100%;
   background-image: url("../../public/hero-mobile.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
   overflow: hidden;
+}
+
+@media (min-width: 360px) {
+  .section-hero {
+    height: 43vh;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -642,6 +648,24 @@ html[lang="es"] .lang-es a {
     margin-top: 204px;
     margin-left: 65px;
     max-width: 567px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container__hero {
+    max-width: 645px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container__hero {
+    max-width: 754px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container__hero {
+    max-width: 846px;
   }
 }
 
@@ -756,7 +780,7 @@ html[lang="es"] .lang-es a {
   overflow: hidden;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section {
     flex-direction: row;
     min-height: 100vh;
@@ -764,13 +788,13 @@ html[lang="es"] .lang-es a {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section-why {
     align-content: space-between;
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section-emdr-explained {
     display: flex;
     flex-direction: row;
@@ -780,7 +804,7 @@ html[lang="es"] .lang-es a {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section-affordable, .section-easy {
     flex-direction: row-reverse;
   }
@@ -795,12 +819,30 @@ html[lang="es"] .lang-es a {
 
 @media (min-width: 1280px) {
   .container__explained {
+    max-width: 930px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container__explained {
+    max-width: 1108px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container__explained {
+    max-width: 1373px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container__explained {
     padding-right: 0;
-    padding-left: 65px;
+    padding-left: 4em;
     padding-top: 44px;
-    margin-right: 62px;
+    margin-right: 50px;
     margin-left: auto;
-    max-width: 615px;
+    max-width: 898px;
   }
 
   .section-contact .container__explained {
@@ -808,7 +850,7 @@ html[lang="es"] .lang-es a {
     margin-top: 44px;
     padding-top: 22px;
     padding-right: 10%;
-    max-width: 860px;
+    max-width: 1280px;
   }
 
   .container__explained.easy, .container__explained.flexible {
@@ -822,7 +864,7 @@ html[lang="es"] .lang-es a {
   }
 
   .faq {
-    margin-left: 0;
+    margin-left: 5%;
     margin-right: auto;
     width: 50%;
   }
@@ -833,17 +875,6 @@ html[lang="es"] .lang-es a {
 
   .section-flexible .container__explained, .section-luna .container__explained {
     margin-left: 0;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container__explained {
-    padding-right: 0;
-    padding-left: 65px;
-    padding-top: 44px;
-    margin-right: 62px;
-    margin-left: auto;
-    max-width: 1041px;
   }
 }
 
@@ -858,7 +889,7 @@ html[lang="es"] .lang-es a {
   margin-bottom: 44px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .explanation__first h3 {
     margin-bottom: 1.3em;
   }
@@ -874,7 +905,7 @@ html[lang="es"] .lang-es a {
   /*margin-left: auto;*/
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .image__explained {
     height: auto;
     width: 50%;
@@ -889,7 +920,7 @@ html[lang="es"] .lang-es a {
   margin-top: 16px;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .image__giannina {
     margin: 0;
     height: 100%;
@@ -968,7 +999,7 @@ html[lang="es"] .lang-es a {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .container__questions {
     display: flex;
     flex-direction: column;
@@ -1080,11 +1111,18 @@ html[lang="es"] .lang-es a {
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .logo__background {
     height: 70%;
     width: 50%;
     background-size: 450%;
+    background-position-x: -680px;
+    background-position-y: -227px;
+  }
+}
+
+@media (min-width: 800px) {
+  .logo__background {
     background-position-x: -900px;
     background-position-y: -300px;
   }
@@ -1117,6 +1155,21 @@ html[lang="es"] .lang-es a {
   .logo__background {
     background-position-x: -832px;
     background-position-y: -279px;
+  }
+}
+
+@media (min-width: 1368px) {
+  .logo__background {
+    background-size: 494%;
+    background-position-x: -1022px;
+    background-position-y: -342px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .logo__background {
+    background-position-x: -1066px;
+    background-position-y: -358px;
   }
 }
 
@@ -1334,7 +1387,7 @@ summary {
 
 
 /*About Page*/
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section-other.about {
     flex-direction: column;
     min-height: fit-content;
@@ -1343,17 +1396,41 @@ summary {
   .about .container__explained {
     margin-right: auto;
     padding-left: 0;
-    max-width: 800px;
+    max-width: 1300px;
   }
 
   .section-founder .container__explained {
     padding-left: 0;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 1300px;
+  }
+
+  .about .explanation__first {
+    margin-top: 80px;
   }
 
   .section-founder h3 {
     margin-top: 1em;
+  }
+
+  .section-training .container__explained {
+    padding-left: 0;
+    margin-right: auto;
+    max-width: 1300px;
+  }
+
+  .section-training {
+    min-height: fit-content;
+  }
+
+  .section-education .container__explained {
+    padding-left: 0;
+    margin-right: auto;
+    max-width: 1300px;
+  }
+
+  .section-education {
+    min-height: fit-content;
   }
 }
 
@@ -1362,6 +1439,12 @@ summary {
 
 .section-other .container__explained {
   padding-top: 55px;
+}
+
+@media (min-width: 1280px) {
+  .section-other .container__explained {
+    padding-top: 100px;
+  }
 }
 
 h4 {
@@ -1379,7 +1462,7 @@ h4::after {
 }
 
 /*Contact Page*/
-@media (min-width: 1280px) {
+@media (min-width: 1920px) {
   .section-contact {
     flex-direction: column;
     align-items: center;
@@ -1393,6 +1476,18 @@ h4::after {
 .section-other h3 {
   font-size: var(--font-xs);
   font-weight: 300;
+}
+
+@media (min-width: 800px) {
+  .section-other h3 {
+    font-size: var(--font-sm);
+  }
+}
+
+@media (min-width: 1600px) {
+  .section-other h3 {
+    font-size: var(--font-med);
+  }
 }
 
 input, select, textarea {
@@ -1455,6 +1550,25 @@ input:focus, textarea:focus, select:focus {
   display: flex;
   flex-direction: column;
   width: 80%;
+}
+
+@media (min-width: 1920px) {
+  .container__infobox {
+    width: 50%;
+    padding: 0 5em;
+  }
+
+  .services-content .image__explained {
+    width: 50%;
+  }
+
+  .services-content .image__explained img {
+    object-position: center;
+  }
+
+  .services-content.reverse {
+    flex-direction: row-reverse;
+  }
 }
 
 .number::before {
@@ -1544,4 +1658,11 @@ input:focus, textarea:focus, select:focus {
 .minimal-button:hover {
   background-color: var(--main-foreground);
   color: var(--main-background);
+}
+
+@media (min-width: 1920px) {
+  .services-content {
+    flex-direction: row;
+    min-height: 100vh;
+  }
 }
