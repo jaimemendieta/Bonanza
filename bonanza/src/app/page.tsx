@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import BonanzaImageA from "../../public/Bonanza-A.jpg";
 import BonanzaImageB from "../../public/Bonanza-B.jpg";
@@ -17,9 +18,14 @@ import WhySection from "@/components/WhySection";
 import FAQSection from "@/components/FAQSection";
 import ReadySection from "@/components/ReadySection";
 import Link from "next/link";
+import WidgetModal from "@/components/WidgetModal";
+import {useState} from "react";
 
 export default function Home() {
-  return (
+    const [showModal, setShowModal] = useState(false);
+    const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
+
+    return (
     <main>
         <Hero />
         <section className="section section-emdr-explained">
@@ -144,7 +150,7 @@ export default function Home() {
                         here.
                     </p>
 
-                    <button className="body-button">
+                    <button onClick={() => setShowModal(true)} className="body-button">
                         <span className="button-text">Book Appointment</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
@@ -161,6 +167,7 @@ export default function Home() {
                     </button>
                 </div>
             </div>
+            {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
             <div className="image__explained center">
                 <Image src={Luna} alt="Image of Vizsla"/>
             </div>
@@ -201,7 +208,7 @@ export default function Home() {
                     </button>
                 </Link>
 
-                <button className="body-button">
+                <button onClick={() => setShowModal(true)} className="body-button">
                     <span className="button-text">Book Appointment</span>
                     <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
@@ -356,7 +363,7 @@ export default function Home() {
                         please use our scheduling tool on Simple Practice.
                     </p>
 
-                    <button className="body-button">
+                    <button onClick={() => setShowModal(true)} className="body-button">
                         <span className="button-text">Book Appointment</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">

@@ -1,9 +1,12 @@
 'use client'
 
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import WidgetModal from "@/components/WidgetModal";
 
 const Hero = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
 
     useEffect(() => {
         const handleResize = () => {
@@ -34,8 +37,14 @@ const Hero = () => {
                         <div className="paragraph__hero__2">
                             <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
                         </div>
-                        <button className="page-button">Schedule Appointment</button>
+                        <button
+                            onClick={() => setShowModal(true)}
+                            className="page-button"
+                        >
+                                Schedule Appointment
+                        </button>
                     </div>
+                    {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                 </section>
             ) : (
                 // Render Mobile Ver
@@ -53,8 +62,9 @@ const Hero = () => {
                             <div className="paragraph__hero__2">
                                 <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
                             </div>
-                            <button className="page-button">Schedule Appointment</button>
+                            <button onClick={() => setShowModal(true)} className="page-button">Schedule Appointment</button>
                         </div>
+                        {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                     </div>
                 </>
             )}
