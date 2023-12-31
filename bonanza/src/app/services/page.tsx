@@ -87,7 +87,7 @@ const services: Service[] = [
         id: 7,
         title: "Telehealth",
         subtitle: "",
-        helpsWith: ["Most of everything listed in the other services above except for EMDR, and Play Therapy"],
+        helpsWith: ["Most of everything listed in the other services above except for Play Therapy"],
         details: [
             "Telehealth allows us to provide counseling and therapy to our clients via live video conferencing. This can be done anywhere you have a computer or smartphone.",
             "Telehealth appointments can be very beneficial if getting to a traditional in-person appointment is not convenient, or you simply just don’t want to.",
@@ -122,7 +122,7 @@ const Page = () => {
             <section key={service.id} className={`section services-content ${index % 2 === 0 ? '' : 'reverse'}`}>
                 <div className="container__infobox">
                     <div className="number">
-                        {String(index + 1).padStart(2, '0')}/
+                        {/*{String(index + 1).padStart(2, '0')}/*/}
                     </div>
                     <div className="infobox-title">
                         {service.title}

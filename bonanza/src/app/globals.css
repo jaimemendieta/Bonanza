@@ -1838,3 +1838,36 @@ iframe {
 .button.primary {
   background-color: var(--secondary-color) !important;
 }
+
+.modal {
+  position: fixed;
+  bottom: 0;
+  background-color: var(--main-background);
+  padding: 1em 2em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+  border-radius: 24px;
+  max-width: 290px;
+  border: 1px solid var(--main-foreground);
+  z-index: 99;
+}
+
+@media (min-width: 600px) {
+  .modal {
+    max-width: 600px;
+  }
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+}
+
+.modal-content p {
+  margin-bottom: 0;
+  margin-right: 3em;
+}
+
+.modal-content .minimal-button {
+  margin-bottom: 0;
+}

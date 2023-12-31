@@ -77,7 +77,7 @@ const Page = () => {
                             Notably, Giannina is TF-CBT and EMDR certified, underscoring her proficiency in delivering impactful therapeutic interventions.
                         </p>
                         <p>
-                            Giannina holds registration with Utah Social Work Association (UTAHSWA), EMDR Certification with EMDR Institute, Inc., and (one more, i need to find it lol)
+                            Giannina holds registration with Utah Social Work Association (UTAHSWA), EMDR Certification with EMDR Institute, Inc., AmeriCorps and PSI CHI, the international Honor Society in Psychology.
                         </p>
                     </div>
                 </div>
@@ -88,8 +88,39 @@ const Page = () => {
                     <div className="explanation">
                         <h2>Education</h2>
                         <p>
-                            Giannina earned a Master’s Degree in Social Work from the University of Utah. She was nominated Outstanding Student of the Year while cursing her second graduate year. She obtained a Bachelor’s Degree in Psychology from University of Utah in 2010.
+                            Giannina earned a Master’s Degree in Social Work from the University of Utah. She was nominated Outstanding Student of the Year while cursing her first graduate year. She obtained a Bachelor’s Degree in Psychology from University of Utah in 2010.
                             As part of her graduating school training, Giannina focuses on providing  community engagement and psychosocial support for vulnerable children and youth.
+                        </p>
+
+                        <h2>Academic Awards</h2>
+                        <p>
+                            Salt Lake Community College, President Honor Roll Award for Outstanding Achievement GPA of 4.0 in 2005.
+                        </p>
+                        <p>
+                            Salt Lake Community College, Dean’s Honor List Award for outstanding Achievement GPA of 3.9 in 2006
+                        </p>
+                        <p>
+                            Salt Lake Community College, Pillar of Excellence Award for outstanding performance and dedication to the highest standard of excellence in 2007
+                        </p>
+                        <p>
+                            Salt Lake Community College, Pillar of Excellence Award for outstanding performance and dedication to the highest standard of excellence in 2008
+                        </p>
+                        <p>
+                            Salt Lake Community College, Pillar of Excellence Award for outstanding performance and dedication to the highest standard of excellence in 2009
+                        </p>
+                        <p>
+                            University of Utah, Nominee Certificate for Outstanding First Year M.S.W. Student of the Year Award in 2016
+                        </p>
+
+                        <h2>Certification Awards</h2>
+                        <p>
+                            Parenting with love and logic at Davis Behavioral Health in 2016.
+                        </p>
+                        <p>
+                            Platinum Star Award for valuable contributions to the DCFS FIAT team in 2015.
+                        </p>
+                        <p>
+                            Gold Star Award for valuable contributions to the DCFS FIAT team in 2014.
                         </p>
                     </div>
                 </div>
