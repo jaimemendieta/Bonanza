@@ -1,5 +1,5 @@
 "use client"
-import type { Metadata } from 'next'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import localFont from 'next/font/local';
 import './globals.css'
 import Header from "@/app/[lang]/components/Header";
@@ -109,6 +109,7 @@ export default function RootLayout({
       <Header params={{ lang: currentLocale }} />
       {children}
       <Footer />
+      <SpeedInsights />
       </body>
     </html>
   )
