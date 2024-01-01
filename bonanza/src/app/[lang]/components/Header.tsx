@@ -1,13 +1,15 @@
 'use client'
 import Link from 'next/link';
 import {useEffect, useState} from "react";
-import MobileHeader from "@/components/MobileHeader";
-import LanguageIcon from "../../public/language.svg";
-import HorizontalLogo from "../../public/bonanza-horizontal-combination-mark.svg";
+import MobileHeader from "@/app/[lang]/components/MobileHeader";
+import LanguageIcon from "../../../../public/language.svg";
+import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
-import WidgetModal from "@/components/WidgetModal";
+import WidgetModal from "@/app/[lang]/components/WidgetModal";
+import { handleLanguageSwitch } from "@/languageSwitcher";
+import { dictionary } from '@/content';
 
-const Header = () => {
+const Header = ({ params }: { params: { lang: string } }) => {
     const [hovered, setHovered] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -15,7 +17,6 @@ const Header = () => {
     const [bgColor, setBgColor] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
-
 
     const handleMouseEnter = () => {
         setHovered(true);
@@ -73,7 +74,7 @@ const Header = () => {
     return (
         <>
             {isMobileView ? (
-                <MobileHeader />
+                <MobileHeader params={{ lang: params.lang }}/>
             ) : (
                 <>
                     <header className={`app-header ${visible ? "visible" : "hidden"} ${bgColor ? 'bg-color' : ''}`}>
@@ -83,15 +84,16 @@ const Header = () => {
                                      src={HorizontalLogo}
                                      alt="Bonanza Logo"/>
                             </Link>
-                            <Link href="/about">About</Link>
-                            <Link href="/services">Services</Link>
-                            <Link href="/contact">Contact</Link>
-                            <Link href="/faq">FAQ</Link>
+                            <Link href="/about">{dictionary[params.lang]?.headerAbout}</Link>
+                            <Link href="/services">{dictionary[params.lang]?.headerServices}</Link>
+                            <Link href="/contact">{dictionary[params.lang]?.headerContact}</Link>
+                            <Link href="/faq">{dictionary[params.lang]?.headerFAQ}</Link>
                         </nav>
 
                         <div className="header-action">
                             <span
                                 className="navigation-language-header"
+                                onClick={handleLanguageSwitch}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >
@@ -101,15 +103,15 @@ const Header = () => {
                                 <div
                                     className={`language-header-translation ${hovered ? 'visible' : ''}`}
                                     >
-                                    Ver en&nbsp;
+                                    {dictionary[params.lang]?.headerLanguagePrefix} &nbsp;
                                 </div>
                                 <div
                                     className={`language-header ${hovered ? '' : 'visible'}`}
                                 >
-                                    Español
+                                    {dictionary[params.lang]?.headerLanguage}
                                 </div>
                             </span>
-                            <button onClick={() => setShowModal(true)} className="header-button">SCHEDULE APPOINTMENT</button>
+                            <button onClick={() => setShowModal(true)} className="header-button">{dictionary[params.lang]?.headerSchedule}</button>
                         </div>
                     </header>
                     {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}

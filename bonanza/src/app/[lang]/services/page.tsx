@@ -1,11 +1,11 @@
-import ServiceA from "../../../public/ServiceA.png";
-import ServiceB from "../../../public/ServiceB.png";
-import ServiceC from "../../../public/ServiceC.png";
-import ServiceD from "../../../public/ServiceD.png";
-import ServiceE from "../../../public/ServiceE.jpg";
-import ServiceF from "../../../public/ServiceF.png";
-import ServiceG from "../../../public/ServiceG.png";
-import ServiceH from "../../../public/Luna.jpg";
+import ServiceA from "../../../../public/ServiceA.png";
+import ServiceB from "../../../../public/ServiceB.png";
+import ServiceC from "../../../../public/ServiceC.png";
+import ServiceD from "../../../../public/ServiceD.png";
+import ServiceE from "../../../../public/ServiceE.jpg";
+import ServiceF from "../../../../public/ServiceF.png";
+import ServiceG from "../../../../public/ServiceG.png";
+import ServiceH from "../../../../public/Luna.jpg";
 
 import Image, {StaticImageData} from "next/image";
 

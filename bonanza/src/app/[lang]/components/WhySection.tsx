@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 import Image from "next/image";
-import Giannina from "../../public/Giannina-2.jpg";
+import Giannina from "../../../../public/Giannina-2.jpg";
 
 const WhySection = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);

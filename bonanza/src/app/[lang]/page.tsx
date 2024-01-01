@@ -1,33 +1,34 @@
 "use client"
 import Image from "next/image";
-import BonanzaImageA from "../../public/Bonanza-A.jpg";
-import BonanzaImageB from "../../public/Bonanza-B.jpg";
-import BonanzaImageC from "../../public/Bonanza-C.jpg";
-import BonanzaImageD from "../../public/Bonanza-D.jpg";
-import BonanzaImageH from "../../public/Bonanza-H.jpg";
-import Luna from "../../public/Luna.jpg";
-import Parquet from "../../public/parquet.png";
-import Earth from "../../public/earth-pattern.png";
-import Star_Light from "../../public/star-light.png";
-import Sun from "../../public/sun.png";
-import Wavy from "../../public/wavy.png";
-import BonanzaVert from "../../public/bonanza-vertical-combination-mark.svg";
+import BonanzaImageA from "../../../public/Bonanza-A.jpg";
+import BonanzaImageB from "../../../public/Bonanza-B.jpg";
+import BonanzaImageC from "../../../public/Bonanza-C.jpg";
+import BonanzaImageD from "../../../public/Bonanza-D.jpg";
+import BonanzaImageH from "../../../public/Bonanza-H.jpg";
+import Luna from "../../../public/Luna.jpg";
+import Parquet from "../../../public/parquet.png";
+import Earth from "../../../public/earth-pattern.png";
+import Star_Light from "../../../public/star-light.png";
+import Sun from "../../../public/sun.png";
+import Wavy from "../../../public/wavy.png";
+import BonanzaVert from "../../../public/bonanza-vertical-combination-mark.svg";
+import { dictionary } from '@/content';
 
-import Hero from "@/components/Hero";
-import WhySection from "@/components/WhySection";
-import FAQSection from "@/components/FAQSection";
-import ReadySection from "@/components/ReadySection";
+import Hero from "@/app/[lang]/components/Hero";
+import WhySection from "@/app/[lang]/components/WhySection";
+import FAQSection from "@/app/[lang]/components/FAQSection";
+import ReadySection from "@/app/[lang]/components/ReadySection";
 import Link from "next/link";
-import WidgetModal from "@/components/WidgetModal";
+import WidgetModal from "@/app/[lang]/components/WidgetModal";
 import {useState} from "react";
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: string } }) {
     const [showModal, setShowModal] = useState(false);
     const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
 
     return (
     <main>
-        <Hero />
+        <Hero params={{ lang: params.lang }}/>
         <section className="section section-emdr-explained">
             <div className="container__explained">
                 <div className="explanation__first">

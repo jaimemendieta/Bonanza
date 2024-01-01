@@ -1,8 +1,11 @@
+"use client"
 import type { Metadata } from 'next'
 import localFont from 'next/font/local';
 import './globals.css'
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/app/[lang]/components/Header";
+import Footer from "@/app/[lang]/components/Footer";
+import { usePathname, useSearchParams } from 'next/navigation';
+import {useEffect, useState} from "react";
 
 const museo_sans = localFont({
     src: [
@@ -69,20 +72,41 @@ const museo_sans_display = localFont({
     ]
 });
 
-export const metadata: Metadata = {
-  title: 'Bonanza',
-  description: 'Counseling',
-}
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+    const [currentLocale, setCurrentLocale] = useState('en');
+
+    useEffect(() => {
+        // Function to parse the cookie
+        const getCookie = (name: string) => {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            const lastPart = parts.pop();
+
+            if (lastPart) {
+                return lastPart.split(';').shift();
+            }
+
+            return null;
+        };
+
+        // Update currentLocale based on the cookie
+        const localeFromCookie = getCookie('NEXT_LOCALE');
+        if (localeFromCookie) {
+            setCurrentLocale(localeFromCookie);
+        }
+
+        // Update the lang attribute of the html tag
+        document.documentElement.lang = currentLocale;
+    }, [currentLocale]);
+
     return (
-    <html lang="en">
+    <html lang={currentLocale}>
       <body className={museo_sans.className}>
-      <Header />
+      <Header params={{ lang: currentLocale }} />
       {children}
       <Footer />
       </body>

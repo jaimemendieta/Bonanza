@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
-import Giannina from "../../../public/Giannina-2.jpg";
-import ReadySection from "@/components/ReadySection";
+import Giannina from "../../../../public/Giannina-2.jpg";
+import ReadySection from "@/app/[lang]/components/ReadySection";
 
 const Page = () => {
     return (

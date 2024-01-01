@@ -1,5 +1,5 @@
 'use client'
-import ReadySection from "@/components/ReadySection";
+import ReadySection from "@/app/[lang]/components/ReadySection";
 import React, {useState} from "react";
 import Link from "next/link";
 

@@ -332,14 +332,18 @@ em {
   display: inline-block;
 }
 
-.mobile-menu-lang-box li a {
+.mobile-menu-lang-box li {
   font-size: calc(4.26666667vw);
   font-weight: 300;
 }
 
-html[lang="en"] .lang-en a,
-html[lang="es"] .lang-es a {
+html[lang="en"] .lang-en,
+html[lang="es"] .lang-es {
   font-weight: 700;
+}
+
+.lang-en, .lang-es {
+  cursor: pointer;
 }
 
 .navigation .logo-link {
@@ -571,7 +575,7 @@ html[lang="es"] .lang-es a {
   display: flex;
   height: 55vh;
   width: 100%;
-  background-image: url("../../public/hero-mobile.jpg");
+  background-image: url("../../../public/hero-mobile.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
@@ -589,7 +593,7 @@ html[lang="es"] .lang-es a {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background-image: url("../../public/hero-desktop.png");
+    background-image: url("../../../public/hero-desktop.png");
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
@@ -600,7 +604,7 @@ html[lang="es"] .lang-es a {
   display: flex;
   height: 43vh;
   width: 100%;
-  background-image: url("../../public/Bonanza-G.jpg");
+  background-image: url("../../../public/Bonanza-G.jpg");
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
@@ -612,7 +616,7 @@ html[lang="es"] .lang-es a {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background-image: url("../../public/Bonanza-G.jpg");
+    background-image: url("../../../public/Bonanza-G.jpg");
     background-size: cover;
     background-attachment: scroll;
     background-position: center;
@@ -1075,7 +1079,7 @@ html[lang="es"] .lang-es a {
   bottom: 0;
   height: 60%;
   width: 60%;
-  background-image: url("../../public/bonanza-vertical-combination-mark.svg");
+  background-image: url("../../../public/bonanza-vertical-combination-mark.svg");
   background-size: 600%;
   background-repeat: no-repeat;
   background-position-x: -580px;

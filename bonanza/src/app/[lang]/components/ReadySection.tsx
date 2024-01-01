@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image";
-import BonanzaImageG from "../../public/Bonanza-G.jpg";
-import WidgetModal from "@/components/WidgetModal";
+import BonanzaImageG from "../../../../public/Bonanza-G.jpg";
+import WidgetModal from "@/app/[lang]/components/WidgetModal";
 import {useState} from "react";
 
 const ReadySection = () => {

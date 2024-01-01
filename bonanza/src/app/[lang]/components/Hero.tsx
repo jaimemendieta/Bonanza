@@ -1,9 +1,10 @@
 'use client'
 
 import React, {useEffect, useState} from "react";
-import WidgetModal from "@/components/WidgetModal";
+import WidgetModal from "@/app/[lang]/components/WidgetModal";
+import {dictionary} from "@/content";
 
-const Hero = () => {
+const Hero = ({ params }: { params: { lang: string } }) => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
@@ -29,19 +30,19 @@ const Hero = () => {
                 <section className="section section-hero">
                     <div className="container__hero">
                         <div className="title__hero">
-                            <h1>Discover Healing & Renewal</h1>
+                            <h1>{dictionary[params.lang]?.heroTitle}</h1>
                         </div>
                         <div className="paragraph__hero__1">
-                            <p>Journey with Bonanza, the haven for evidence-based EMDR therapy, where traumas and stress disorders are transformed into strengths.</p>
+                            <p>{dictionary[params.lang]?.heroP1}</p>
                         </div>
                         <div className="paragraph__hero__2">
-                            <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
+                            <p>{dictionary[params.lang]?.heroP2}</p>
                         </div>
                         <button
                             onClick={() => setShowModal(true)}
                             className="page-button"
                         >
-                                Schedule Appointment
+                            {dictionary[params.lang]?.scheduleAppointment}
                         </button>
                     </div>
                     {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
@@ -54,15 +55,15 @@ const Hero = () => {
                     <div className="below-hero">
                         <div className="container__hero">
                             <div className="title__hero">
-                                <h1>Discover Healing & Renewal</h1>
+                                <h1>{dictionary[params.lang]?.heroTitle}</h1>
                             </div>
                             <div className="paragraph__hero__1">
-                                <p>Journey with Bonanza, the haven for evidence-based EMDR therapy, where traumas and stress disorders are transformed into strengths.</p>
+                                <p>{dictionary[params.lang]?.heroP1}</p>
                             </div>
                             <div className="paragraph__hero__2">
-                                <p>Every story holds challenges. Let us help you turn yours into a testament of resilience and growth. Your path to a brighter tomorrow starts here. Schedule your free 15-minute consultation today.</p>
+                                <p>{dictionary[params.lang]?.heroP2}</p>
                             </div>
-                            <button onClick={() => setShowModal(true)} className="page-button">Schedule Appointment</button>
+                            <button onClick={() => setShowModal(true)} className="page-button">{dictionary[params.lang]?.scheduleAppointment}</button>
                         </div>
                         {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                     </div>

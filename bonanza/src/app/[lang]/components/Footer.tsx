@@ -1,14 +1,15 @@
 import Link from "next/link";
+import { handleLanguageSwitch } from "@/languageSwitcher";
 
 const Footer = () => {
     return (
         <footer className="footer">
             <ul className="mobile-menu-lang-box__footer">
-                <li className="lang-en">
-                    <Link href="/" title="English">EN</Link>
+                <li className="lang-en" onClick={handleLanguageSwitch}>
+                    EN
                 </li>
-                <li className="lang-es">
-                    <Link href="/es/index" title="Español">ES</Link>
+                <li className="lang-es" onClick={handleLanguageSwitch}>
+                    ES
                 </li>
             </ul>
 

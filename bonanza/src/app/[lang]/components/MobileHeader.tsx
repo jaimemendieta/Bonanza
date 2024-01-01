@@ -1,11 +1,14 @@
 'use client'
 import Link from 'next/link';
 import {useEffect, useState} from "react";
-import HorizontalLogo from "../../public/bonanza-horizontal-combination-mark.svg";
+import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
-import WidgetModal from "@/components/WidgetModal";
+import WidgetModal from "@/app/[lang]/components/WidgetModal";
+import { handleLanguageSwitch } from "@/languageSwitcher";
+import { dictionary } from '@/content';
 
-const MobileHeader = () => {
+
+const MobileHeader = ({ params }: { params: { lang: string } }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -86,7 +89,7 @@ const MobileHeader = () => {
                             <li>
                                 <h2>
                                     <Link href="/" onClick={toggleMenu}>
-                                        <span>Home</span>
+                                        <span>{dictionary[params.lang]?.headerHome}</span>
                                     </Link>
 
                                 </h2>
@@ -94,7 +97,7 @@ const MobileHeader = () => {
                             <li>
                                 <h2>
                                     <Link href="/about" onClick={toggleMenu}>
-                                        <span>About</span>
+                                        <span>{dictionary[params.lang]?.headerAbout}</span>
                                     </Link>
 
                                 </h2>
@@ -102,7 +105,7 @@ const MobileHeader = () => {
                             <li>
                                 <h2>
                                     <Link href="/services" onClick={toggleMenu}>
-                                        <span>Services</span>
+                                        <span>{dictionary[params.lang]?.headerServices}</span>
                                     </Link>
 
                                 </h2>
@@ -110,7 +113,7 @@ const MobileHeader = () => {
                             <li>
                                 <h2>
                                     <Link href="/contact" onClick={toggleMenu}>
-                                        <span>Contact</span>
+                                        <span>{dictionary[params.lang]?.headerContact}</span>
                                     </Link>
 
                                 </h2>
@@ -118,21 +121,21 @@ const MobileHeader = () => {
                             <li>
                                 <h2>
                                     <Link href="/faq" onClick={toggleMenu}>
-                                        <span>FAQ</span>
+                                        <span>{dictionary[params.lang]?.headerFAQ}</span>
                                     </Link>
 
                                 </h2>
                             </li>
                         </ul>
 
-                        <button onClick={() => {setShowModal(true); toggleMenu();}} className="mobile-button">Book Appointment</button>
+                        <button onClick={() => {setShowModal(true); toggleMenu();}} className="mobile-button">{dictionary[params.lang]?.bookAppointment}</button>
 
                         <ul className="mobile-menu-lang-box">
-                            <li className="lang-en">
-                                <Link href="/" title="English">EN</Link>
+                            <li className="lang-en" onClick={handleLanguageSwitch}>
+                                EN
                             </li>
-                            <li className="lang-es">
-                                <Link href="/es/index" title="Español">ES</Link>
+                            <li className="lang-es" onClick={handleLanguageSwitch}>
+                                ES
                             </li>
                         </ul>
                     </nav>
