@@ -108,7 +108,7 @@ export default function RootLayout({
       <body className={museo_sans.className}>
       <Header params={{ lang: currentLocale }} />
       {children}
-      <Footer />
+      <Footer params={{ lang: currentLocale }} />
       <SpeedInsights />
       </body>
     </html>

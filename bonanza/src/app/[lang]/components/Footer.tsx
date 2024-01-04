@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { handleLanguageSwitch } from "@/languageSwitcher";
+import { dictionary } from '@/content';
 
-const Footer = () => {
+const Footer = ({ params }: { params: { lang: string } }) => {
     return (
         <footer className="footer">
             <ul className="mobile-menu-lang-box__footer">
@@ -18,7 +19,7 @@ const Footer = () => {
                     <li>
                         <h2>
                             <Link href="/">
-                                <span>Home</span>
+                                <span>{dictionary[params.lang]?.headerHome}</span>
                             </Link>
 
                         </h2>
@@ -26,7 +27,7 @@ const Footer = () => {
                     <li>
                         <h2>
                             <Link href="/about">
-                                <span>About</span>
+                                <span>{dictionary[params.lang]?.headerAbout}</span>
                             </Link>
 
                         </h2>
@@ -34,7 +35,7 @@ const Footer = () => {
                     <li>
                         <h2>
                             <Link href="/services">
-                                <span>Services</span>
+                                <span>{dictionary[params.lang]?.headerServices}</span>
                             </Link>
 
                         </h2>
@@ -42,7 +43,7 @@ const Footer = () => {
                     <li>
                         <h2>
                             <Link href="/contact">
-                                <span>Contact</span>
+                                <span>{dictionary[params.lang]?.headerContact}</span>
                             </Link>
 
                         </h2>
@@ -50,7 +51,7 @@ const Footer = () => {
                     <li>
                         <h2>
                             <Link href="/faq">
-                                <span>FAQ</span>
+                                <span>{dictionary[params.lang]?.headerFAQ}</span>
                             </Link>
 
                         </h2>
@@ -94,17 +95,17 @@ const Footer = () => {
             <ul className="other-list__footer">
                 <li>
                     <Link href="/">
-                        <span>BONANZA</span>
+                        <span>BONANZA &copy;</span>
                     </Link>
                 </li>
                 <li>
                     <Link href="/policy">
-                        <span>PRIVACY POLICY</span>
+                        <span>{dictionary[params.lang]?.footerPrivacyPolicy}</span>
                     </Link>
                 </li>
                 <li>
-                    <Link href="/portfolio">
-                        <span>DESIGNED BY JAIME MENDIETA</span>
+                    <Link href="#">
+                        <span>{dictionary[params.lang]?.footerDesignedBy}</span>
                     </Link>
                 </li>
             </ul>

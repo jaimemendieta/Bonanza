@@ -32,44 +32,38 @@ export default function Home({ params }: { params: { lang: string } }) {
         <section className="section section-emdr-explained">
             <div className="container__explained">
                 <div className="explanation__first">
-                    <h2>What is EMDR Therapy?</h2>
+                    <h2>{dictionary[params.lang]?.emdrTherapyTitle}</h2>
                     <p>
-                        EMDR, or Eye Movement Desensitization and Reprocessing, is a powerful therapeutic technique
-                        developed to aid individuals in processing traumatic memories and adverse life experiences.
-                        At its core, EMDR is designed to help clients integrate and understand these memories,
-                        ultimately reducing their emotional charge.
+                        {dictionary[params.lang]?.emdrTherapyDescription}
                     </p>
                 </div>
 
                 <div className="explanation">
-                    <h3>How Does It Work?</h3>
+                    <h3>{dictionary[params.lang]?.howItWorksTitle}</h3>
                     <p>
-                        EMDR utilizes structured eight-phase therapy involving bilateral stimulation, often through
-                        guided eye movements. This process helps the brain reprocess traumatic memories,
-                        transforming them into more manageable, neutral memories.
+                        {dictionary[params.lang]?.howItWorksDescription}
                     </p>
                 </div>
 
                 <div className="explanation">
-                    <h3>Benefits of EMDR Include:</h3>
+                    <h3>{dictionary[params.lang]?.benefitsTitle}</h3>
                     <p>
-                        Rapid processing of traumatic experiences. <br/>
-                        Decreased distress from disturbing memories. <br/>
-                        Improved self-esteem and self-worth. <br/>
-                        Enhanced ability to live in the present without being overshadowed by the past. <br/>
+                        {dictionary[params.lang]?.benefitsDescription1} <br/>
+                        {dictionary[params.lang]?.benefitsDescription2} <br/>
+                        {dictionary[params.lang]?.benefitsDescription3} <br/>
+                        {dictionary[params.lang]?.benefitsDescription4} <br/>
                     </p>
                 </div>
 
                 <div className="explanation">
                     <p>
-                        At Bonanza, our trained therapists utilize EMDR to help you navigate past traumas,
-                        allowing you to move forward with resilience and renewed strength.
+                        {dictionary[params.lang]?.benefitsDescription5}
                     </p>
                 </div>
 
                 <Link href="/services">
                     <button className="body-button">
-                        <span className="button-text">More Services</span>
+                        <span className="button-text">{dictionary[params.lang]?.moreServicesButton}</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -86,7 +80,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 </Link>
 
                 <button className="body-button">
-                    <span className="button-text">Learn More</span>
+                    <span className="button-text">{dictionary[params.lang]?.learnMoreButton}</span>
                     <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -112,47 +106,39 @@ export default function Home({ params }: { params: { lang: string } }) {
             <div className="container__explained">
                 <div className="explanation">
                     <Image className="pattern" src={Sun} alt="Pattern Icon"/>
-                    <h3>Advanced Training & Certification:</h3>
+                    <h3>{dictionary[params.lang]?.advancedTrainingTitle}</h3>
                     <p className="plist">
-                        Giannina’s commitment to continued learning and excellence is evident in her numerous
-                        certifications:
+                        {dictionary[params.lang]?.certificationsDescription1}
                     </p>
                     <p className="plist">
-                        EMDR for Complex Trauma, Grief & Mourning, and Strategies for Attachment Issues in Children &
-                        Adolescents.
+                        {dictionary[params.lang]?.certificationsDescription2}
                     </p>
                     <p className="plist">
-                        Cognitive Behavioral Therapy (CBT) and Trauma Focused-CBT
+                        {dictionary[params.lang]?.certificationsDescription3}
                     </p>
                     <p>
-                        Mindfulness Based Stress Reduction
+                        {dictionary[params.lang]?.certificationsDescription4}
                     </p>
                     <p>
-                        And she proudly holds registration with Utah Social Work Association (UTAHSWA), EMDR Institute, Inc., and more.
+                        {dictionary[params.lang]?.certificationsDescription5}
                     </p>
 
-                    <h3>Beyond Therapy:</h3>
+                    <h3>{dictionary[params.lang]?.beyondTherapyTitle}</h3>
                     <p>
-                        Outside her professional life, Giannina enriches her parenting journey through continuous
-                        learning and resource exploration. She relishes moments with her family, outdoor adventures
-                        with Luna, her therapy Vizsla, and finds joy in dancing.
+                        {dictionary[params.lang]?.beyondTherapyDescription}
                     </p>
 
-                    <h3>A Unique Therapy Experience:</h3>
+                    <h3>{dictionary[params.lang]?.uniqueExperienceTitle}</h3>
                     <p>
-                        Embrace the warmth and comfort of therapy sessions with Luna, the therapy Vizsla. Her gentle
-                        presence can enhance the therapeutic environment, providing an additional layer of relaxation
-                        and connection.
+                        {dictionary[params.lang]?.uniqueExperienceDescription1}
                     </p>
 
                     <p>
-                        Choose Bonanza, and you&apos;re not just choosing therapy; you&apos;re choosing a sanctuary of
-                        understanding, expertise, and compassionate care. Your journey to healing and renewal begins
-                        here.
+                        {dictionary[params.lang]?.uniqueExperienceDescription2}
                     </p>
 
                     <button onClick={() => setShowModal(true)} className="body-button">
-                        <span className="button-text">Book Appointment</span>
+                        <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -177,23 +163,22 @@ export default function Home({ params }: { params: { lang: string } }) {
         <section className="section section-affordable">
             <div className="container__explained">
                 <div className="explanation__first">
-                    <h2>Affordable Care Tailored to Your Needs</h2>
-                    <h3>Our Therapy Session Rates:</h3>
+                    <h2>{dictionary[params.lang]?.affordableCareTitle}</h2>
+                    <h3>{dictionary[params.lang]?.sessionRatesTitle}</h3>
                     <p>
-                        <em>Initial Intake Session:</em> $160 for a 50-minute session
+                        <em>{dictionary[params.lang]?.sessionRatesDescription1}</em> {dictionary[params.lang]?.sessionRatesDescription2}
                     </p>
                     <p>
-                        <em>Regular Therapy Session:</em> $140 for 50 minutes
+                        <em>{dictionary[params.lang]?.sessionRatesDescription3}</em> {dictionary[params.lang]?.sessionRatesDescription4}
                     </p>
                     <p>
-                        <em>Special Self-Pay Option:</em> We offer a reduced rate for self-pay. Please get in touch to
-                        discuss the details.
+                        <em>{dictionary[params.lang]?.sessionRatesDescription5}</em> {dictionary[params.lang]?.sessionRatesDescription6}
                     </p>
                 </div>
 
                 <Link href="/contact">
                     <button className="body-button">
-                        <span className="button-text">Contact Us</span>
+                        <span className="button-text">{dictionary[params.lang]?.contactUsButton}</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -210,7 +195,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 </Link>
 
                 <button onClick={() => setShowModal(true)} className="body-button">
-                    <span className="button-text">Book Appointment</span>
+                    <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
                     <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -226,11 +211,9 @@ export default function Home({ params }: { params: { lang: string } }) {
                 </button>
 
                 <div className="explanation">
-                    <h3>Insurance Information:</h3>
+                    <h3>{dictionary[params.lang]?.insuranceInformationTitle}</h3>
                     <p>
-                        Understanding your insurance benefits is crucial. While many insurance providers or employee
-                        benefit plans might cover our services either in full or in part, it&apos;s essential to confirm the
-                        specifics with your provider.
+                        {dictionary[params.lang]?.insuranceInformationDescription}
                     </p>
                 </div>
             </div>
@@ -242,50 +225,45 @@ export default function Home({ params }: { params: { lang: string } }) {
         <section className="section section-key">
             <div className="container__explained">
                 <div className="explanation__first">
-                    <h3>Key Questions for Your Insurance Provider</h3>
+                    <h3>{dictionary[params.lang]?.keyQuestionsTitle}</h3>
 
                     <div className="container container__questions">
                         <div className="container question">
-                            <h3>Mental Health Benefits</h3>
-                            <p>Does my health insurance plan include mental health benefits?</p>
+                            <h3>{dictionary[params.lang]?.mentalHealthBenefitsTitle}</h3>
+                            <p>{dictionary[params.lang]?.mentalHealthBenefitsQuestion}</p>
                         </div>
 
                         <div className="container question">
-                            <h3>Deductibles</h3>
-                            <p>Do I have a deductible? If so, what is it, and have I met it yet?</p>
+                            <h3>{dictionary[params.lang]?.deductiblesTitle}</h3>
+                            <p>{dictionary[params.lang]?.deductiblesQuestion}</p>
                         </div>
 
                         <div className="container question">
-                            <h3>Session Limitations</h3>
+                            <h3>{dictionary[params.lang]?.sessionLimitationsTitle}</h3>
                             <p>
-                                Does my plan limit the number of sessions I can have per calendar year? If so,
-                                what&apos;s the limit?
+                                {dictionary[params.lang]?.sessionLimitationsQuestion}
                             </p>
                         </div>
 
                         <div className="container question">
-                            <h3>Primary Care Physician Approval</h3>
+                            <h3>{dictionary[params.lang]?.physicianApprovalTitle}</h3>
                             <p>
-                                Do I need a written approval from my primary care physician for services to be
-                                covered?
+                                {dictionary[params.lang]?.physicianApprovalQuestion}
                             </p>
                         </div>
                     </div>
 
                     <p>
-                        We advise you to reach out to your insurance provider to ensure you&apos;re well-informed about
-                        your benefits and coverage options.
+                        {dictionary[params.lang]?.insuranceAdvice}
                     </p>
 
                     <p>
-                        Remember, investing in mental health is invaluable. We aim to make the process as transparent
-                        and straightforward as possible for you. If you have any questions or need clarification,
-                        please don&apos;t hesitate to contact us.
+                        {dictionary[params.lang]?.insuranceReminder}
                     </p>
 
                     <Link href="/contact">
                         <button className="body-button">
-                            <span className="button-text">Contact Us</span>
+                            <span className="button-text">{dictionary[params.lang]?.contactUsButton}</span>
                             <span className="arrow-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                                     <path
@@ -310,10 +288,8 @@ export default function Home({ params }: { params: { lang: string } }) {
         <section className="section section-easy">
             <div className="container__explained easy">
                 <div className="explanation__first">
-                    <h2>Easy Payment Options</h2>
-                    <h3>
-                        We strive to make the payment process as seamless as possible for you. Here&apos;s how you can
-                        settle your sessions with us:</h3>
+                    <h2>{dictionary[params.lang]?.easyPaymentOptionsTitle}</h2>
+                    <h3>{dictionary[params.lang]?.easyPaymentOptionsDescription}</h3>
                     <p className="plist">
                         <em>Cash:</em> Direct payments can be made during your session
                     </p>
