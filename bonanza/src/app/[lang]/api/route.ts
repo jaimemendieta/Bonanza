@@ -15,7 +15,6 @@ export async function POST(req: Request, res: Response) {
     // Manually parse the JSON body from the request
     const body = await req.body;
     const data = await new Response(body).json();
-
     const { name, email, subject, message } = data;
 
     // Server validation

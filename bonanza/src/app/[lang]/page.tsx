@@ -1,4 +1,3 @@
-"use client"
 import Image from "next/image";
 import BonanzaImageA from "../../../public/Bonanza-A.jpg";
 import BonanzaImageB from "../../../public/Bonanza-B.jpg";
@@ -19,12 +18,9 @@ import WhySection from "@/app/[lang]/components/WhySection";
 import FAQSection from "@/app/[lang]/components/FAQSection";
 import ReadySection from "@/app/[lang]/components/ReadySection";
 import Link from "next/link";
-import WidgetModal from "@/app/[lang]/components/WidgetModal";
-import {useState} from "react";
 
 export default function Home({ params }: { params: { lang: string } }) {
-    const [showModal, setShowModal] = useState(false);
-    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
+    const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     return (
     <main>
@@ -137,24 +133,25 @@ export default function Home({ params }: { params: { lang: string } }) {
                         {dictionary[params.lang]?.uniqueExperienceDescription2}
                     </p>
 
-                    <button onClick={() => setShowModal(true)} className="body-button">
-                        <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
-                        <span className="arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="square"
-                                strokeMiterlimit="10"
-                                strokeWidth="32"
-                                d="M112 244l144-144 144 144M256 120v292"
-                            />
-                        </svg>
-                    </span>
-                    </button>
+                    <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                        <button className="body-button">
+                            <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
+                            <span className="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                                <path
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeLinecap="square"
+                                    strokeMiterlimit="10"
+                                    strokeWidth="32"
+                                    d="M112 244l144-144 144 144M256 120v292"
+                                />
+                            </svg>
+                        </span>
+                        </button>
+                    </Link>
                 </div>
             </div>
-            {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
             <div className="image__explained center">
                 <Image src={Luna} alt="Image of Vizsla"/>
             </div>
@@ -194,9 +191,10 @@ export default function Home({ params }: { params: { lang: string } }) {
                     </button>
                 </Link>
 
-                <button onClick={() => setShowModal(true)} className="body-button">
-                    <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
-                    <span className="arrow-icon">
+                <Link href={clientPortalUrl} target="_blank" rel="nooper noreferrer">
+                    <button className="body-button">
+                        <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
+                        <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
                                 fill="none"
@@ -208,7 +206,8 @@ export default function Home({ params }: { params: { lang: string } }) {
                             />
                         </svg>
                     </span>
-                </button>
+                    </button>
+                </Link>
 
                 <div className="explanation">
                     <h3>{dictionary[params.lang]?.insuranceInformationTitle}</h3>
@@ -332,21 +331,24 @@ export default function Home({ params }: { params: { lang: string } }) {
                         <em>{dictionary[params.lang]?.appointmentPolicyDescription7}</em> {dictionary[params.lang]?.appointmentPolicyDescription8}
                     </p>
 
-                    <button onClick={() => setShowModal(true)} className="body-button">
-                        <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
-                        <span className="arrow-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
-                            <path
-                                fill="none"
-                                stroke="currentColor"
-                                strokeLinecap="square"
-                                strokeMiterlimit="10"
-                                strokeWidth="32"
-                                d="M112 244l144-144 144 144M256 120v292"
-                            />
-                        </svg>
-                    </span>
-                    </button>
+                    <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                        <button className="body-button">
+                            <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
+                            <span className="arrow-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
+                                    <path
+                                        fill="none"
+                                        stroke="currentColor"
+                                        strokeLinecap="square"
+                                        strokeMiterlimit="10"
+                                        strokeWidth="32"
+                                        d="M112 244l144-144 144 144M256 120v292"
+                                    />
+                                </svg>
+                            </span>
+                        </button>
+                    </Link>
+
                 </div>
             </div>
             <div className="image__explained center">

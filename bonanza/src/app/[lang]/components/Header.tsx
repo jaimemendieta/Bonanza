@@ -5,7 +5,6 @@ import MobileHeader from "@/app/[lang]/components/MobileHeader";
 import LanguageIcon from "../../../../public/language.svg";
 import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
-import WidgetModal from "@/app/[lang]/components/WidgetModal";
 import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
 
@@ -15,8 +14,7 @@ const Header = ({ params }: { params: { lang: string } }) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [bgColor, setBgColor] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
+    const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     const handleMouseEnter = () => {
         setHovered(true);
@@ -111,10 +109,11 @@ const Header = ({ params }: { params: { lang: string } }) => {
                                     {dictionary[params.lang]?.headerLanguage}
                                 </div>
                             </span>
-                            <button onClick={() => setShowModal(true)} className="header-button">{dictionary[params.lang]?.headerSchedule}</button>
+                            <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                                <button className="header-button">{dictionary[params.lang]?.headerSchedule}</button>
+                            </Link>
                         </div>
                     </header>
-                    {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                 </>
             )}
         </>

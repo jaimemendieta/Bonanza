@@ -1,13 +1,12 @@
 'use client'
 
 import React, {useEffect, useState} from "react";
-import WidgetModal from "@/app/[lang]/components/WidgetModal";
 import {dictionary} from "@/content";
+import Link from "next/link";
 
 const Hero = ({ params }: { params: { lang: string } }) => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
+    const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     useEffect(() => {
         const handleResize = () => {
@@ -38,14 +37,12 @@ const Hero = ({ params }: { params: { lang: string } }) => {
                         <div className="paragraph__hero__2">
                             <p>{dictionary[params.lang]?.heroP2}</p>
                         </div>
-                        <button
-                            onClick={() => setShowModal(true)}
-                            className="page-button"
-                        >
-                            {dictionary[params.lang]?.scheduleAppointment}
-                        </button>
+                        <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                            <button className="page-button">
+                                {dictionary[params.lang]?.scheduleAppointment}
+                            </button>
+                        </Link>
                     </div>
-                    {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                 </section>
             ) : (
                 // Render Mobile Ver
@@ -63,9 +60,12 @@ const Hero = ({ params }: { params: { lang: string } }) => {
                             <div className="paragraph__hero__2">
                                 <p>{dictionary[params.lang]?.heroP2}</p>
                             </div>
-                            <button onClick={() => setShowModal(true)} className="page-button">{dictionary[params.lang]?.scheduleAppointment}</button>
+                            <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                                <button className="page-button">
+                                    {dictionary[params.lang]?.scheduleAppointment}
+                                </button>
+                            </Link>
                         </div>
-                        {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
                     </div>
                 </>
             )}

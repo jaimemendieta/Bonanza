@@ -5,7 +5,7 @@ import Link from "next/link";
 import {dictionary} from "@/content";
 
 const FAQSection = ({ params }: { params: { lang: string } }) => {
-    const [openStates, setOpenStates] = useState<boolean[]>(new Array(dictionary[params.lang].faqQuestions.length).fill(false));
+    const [openStates, setOpenStates] = useState<boolean[]>(new Array(dictionary[params.lang]?.faqQuestions.length).fill(false));
 
     const handleToggle = (index: number) => {
         setOpenStates(prevStates => {
@@ -22,7 +22,7 @@ const FAQSection = ({ params }: { params: { lang: string } }) => {
                     <h2>{dictionary[params.lang]?.faqTitle}</h2>
                     <div className="accordion-list-container">
                         <ul className="accordion-list">
-                            {dictionary[params.lang].faqQuestions.map((faq, index) => (
+                            {dictionary[params.lang]?.faqQuestions.map((faq, index) => (
                                 <React.Fragment key={index}>
                                     <li className="accordion-list_item">
                                         <details className={`accordion ${openStates[index] ? 'is-active' : ''}`}
@@ -31,14 +31,14 @@ const FAQSection = ({ params }: { params: { lang: string } }) => {
                                             <summary className="accordion_summary">
                                             <span className="accordion_summary_inner">
                                                 <span className="accordion_title">
-                                                    {dictionary[params.lang].faqQuestions[index]}
+                                                    {dictionary[params.lang]?.faqQuestions[index]}
                                                 </span>
                                                 <span className="accordion_icon"></span>
                                             </span>
                                             </summary>
                                             <div className="accordion_content">
                                                 <p>
-                                                    {dictionary[params.lang].faqAnswers[index]}
+                                                    {dictionary[params.lang]?.faqAnswers[index]}
                                                 </p>
                                             </div>
                                         </details>

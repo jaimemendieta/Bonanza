@@ -73,7 +73,6 @@ const Page = () => {
                 body: JSON.stringify(formData),
             });
 
-            const responseData = await response.json();
 
             if (response.ok) {
                 // success
@@ -91,6 +90,7 @@ const Page = () => {
         } catch (error) {
             setModalMessage('Failed to send message. Please refresh page and try again.');
             setShowModal(true);
+            setIsLoading(false);
         }
     }
 
@@ -147,7 +147,16 @@ const Page = () => {
 
                         <div className="el-group el-form-hide_label">
                             <div className="el-input--content">
-                                <textarea onChange={handleChange} className="el-form-control" id="message" name="message" placeholder="Feel free to message me any questions, or thoughts." value={formData.message} required>
+                                <textarea
+                                    onChange={handleChange}
+                                    className="el-form-control"
+                                    id="message"
+                                    name="message"
+                                    placeholder="Feel free to message me any questions, or thoughts."
+                                    value={formData.message}
+                                    rows={9}
+                                    required
+                                >
                                 </textarea>
                             </div>
                         </div>

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {useEffect, useState} from "react";
 import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-mark.svg";
 import Image from "next/image";
-import WidgetModal from "@/app/[lang]/components/WidgetModal";
 import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
 
@@ -13,8 +12,7 @@ const MobileHeader = ({ params }: { params: { lang: string } }) => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [bgColor, setBgColor] = useState(false);
-    const [showModal, setShowModal] = useState(false);
-    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
+    const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -128,7 +126,11 @@ const MobileHeader = ({ params }: { params: { lang: string } }) => {
                             </li>
                         </ul>
 
-                        <button onClick={() => {setShowModal(true); toggleMenu();}} className="mobile-button">{dictionary[params.lang]?.bookAppointment}</button>
+                        <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                            <button onClick={toggleMenu} className="mobile-button">
+                                {dictionary[params.lang]?.bookAppointment}
+                            </button>
+                        </Link>
 
                         <ul className="mobile-menu-lang-box">
                             <li className="lang-en" onClick={handleLanguageSwitch}>
@@ -141,7 +143,6 @@ const MobileHeader = ({ params }: { params: { lang: string } }) => {
                     </nav>
                 </div>
             </header>
-            {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
         </>
     );
 };

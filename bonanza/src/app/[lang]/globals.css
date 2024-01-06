@@ -1875,3 +1875,7 @@ iframe {
 .modal-content .minimal-button {
   margin-bottom: 0;
 }
+
+option {
+  font-family: "museo-sans", sans-serif;
+}

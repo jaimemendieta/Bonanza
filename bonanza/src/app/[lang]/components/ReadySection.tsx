@@ -1,13 +1,10 @@
-"use client"
 import Image from "next/image";
 import BonanzaImageG from "../../../../public/Bonanza-G.jpg";
-import WidgetModal from "@/app/[lang]/components/WidgetModal";
-import {useState} from "react";
 import {dictionary} from "@/content";
+import Link from "next/link";
 
 const ReadySection = ({ params }: { params: { lang: string } }) => {
-    const [showModal, setShowModal] = useState(false);
-    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
+    const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     return (
         <>
@@ -19,13 +16,16 @@ const ReadySection = ({ params }: { params: { lang: string } }) => {
                             {dictionary[params.lang]?.readyToBeginDescription}
                         </p>
                     </div>
-                    <button onClick={() => setShowModal(true)} className="page-button">{dictionary[params.lang]?.bookFreeConsultationButton}</button>
+                    <Link href={clientPortalUrl} target="_blank" rel="noopener noreferrer">
+                        <button className="page-button">
+                            {dictionary[params.lang]?.bookFreeConsultationButton}
+                        </button>
+                    </Link>
                 </div>
                 <div className="image__explained">
                     <Image src={BonanzaImageG} alt="Scenic Image G"/>
                 </div>
             </section>
-            {showModal && <WidgetModal url={widgetUrl} onClose={() => setShowModal(false)} />}
         </>
     );
 }
