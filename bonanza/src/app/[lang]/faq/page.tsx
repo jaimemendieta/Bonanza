@@ -118,7 +118,7 @@ const faqData = [
             "This is a very brief overview and is not an exhaustive list. Of course, at Bonanza Counseling Services, we focus on providing effective psychotherapy."
     }
 ]
-const Page = () => {
+const Page = ({ params }: { params: { lang: string } }) => {
     const [openStates, setOpenStates] = useState<boolean[]>(new Array(faqData.length).fill(false));
 
     const handleToggle = (index: number) => {
@@ -187,7 +187,7 @@ const Page = () => {
                 </div>
             </section>
 
-            <ReadySection />
+            <ReadySection params={{ lang: params.lang }} />
         </main>
     );
 };

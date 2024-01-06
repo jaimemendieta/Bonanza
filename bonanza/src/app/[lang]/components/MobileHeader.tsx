@@ -14,7 +14,7 @@ const MobileHeader = ({ params }: { params: { lang: string } }) => {
     const [visible, setVisible] = useState(true);
     const [bgColor, setBgColor] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
+    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);

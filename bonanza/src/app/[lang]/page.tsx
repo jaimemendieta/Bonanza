@@ -24,7 +24,7 @@ import {useState} from "react";
 
 export default function Home({ params }: { params: { lang: string } }) {
     const [showModal, setShowModal] = useState(false);
-    const widgetUrl = "https://giannina-fuentes.clientsecure.me/widget-redirect?scopeId=acd781f0-47c2-4bab-96a3-06bc062ed8d0&scopeGlobal=true&applicationId=7c72cb9f9a9b913654bb89d6c7b4e71a77911b30192051da35384b4d0c6d505b&appearance=%7B%22fullScreen%22%3Atrue%7D";
+    let widgetUrl: string = process.env.NEXT_PUBLIC_WIDGET_URL as string;
 
     return (
     <main>
@@ -100,7 +100,7 @@ export default function Home({ params }: { params: { lang: string } }) {
             </div>
         </section>
 
-        <WhySection />
+        <WhySection params={{ lang: params.lang }} />
 
         <section className="section section-luna">
             <div className="container__explained">
@@ -291,22 +291,20 @@ export default function Home({ params }: { params: { lang: string } }) {
                     <h2>{dictionary[params.lang]?.easyPaymentOptionsTitle}</h2>
                     <h3>{dictionary[params.lang]?.easyPaymentOptionsDescription}</h3>
                     <p className="plist">
-                        <em>Cash:</em> Direct payments can be made during your session
+                        <em>{dictionary[params.lang]?.paymentMethodsDescription1}</em> {dictionary[params.lang]?.paymentMethodsDescription2}
                     </p>
                     <p className="plist">
-                        <em>Check:</em> Kindly ensure checks are made payable to &quot;Bonanza Counseling Services&quot;
+                        <em>{dictionary[params.lang]?.paymentMethodsDescription3}</em> {dictionary[params.lang]?.paymentMethodsDescription4}
                     </p>
                     <p className="plist">
-                        <em>Credit Cards:</em> We accept all major credit cards, including HSA. Secure transactions
-                        guaranteed.
+                        <em>{dictionary[params.lang]?.paymentMethodsDescription5}</em> {dictionary[params.lang]?.paymentMethodsDescription6}
                     </p>
                     <p>
-                        <em>Online Payments:</em> For your convenience, we also offer secure online payment options
-                        through Simple Practice on our website.
+                        <em>{dictionary[params.lang]?.paymentMethodsDescription7}</em> {dictionary[params.lang]?.paymentMethodsDescription8}
                     </p>
 
                     <p>
-                        <em>Note:</em> Please ensure all payments are made promptly to ensure uninterrupted service.
+                        <em>{dictionary[params.lang]?.paymentMethodsDescription9}</em> {dictionary[params.lang]?.paymentMethodsDescription10}
                     </p>
                 </div>
             </div>
@@ -318,30 +316,24 @@ export default function Home({ params }: { params: { lang: string } }) {
         <section className="section section-flexible">
             <div className="container__explained flexible">
                 <div className="explanation__first">
-                    <h2>Flexible Scheduling for Your Convenience</h2>
-                    <h3>Your appointment time is reserved just for you.</h3>
+                    <h2>{dictionary[params.lang]?.flexibleSchedulingTitle}</h2>
+                    <h3>{dictionary[params.lang]?.appointmentPolicyDescription1}</h3>
                     <p className="plist">
-                        We understand that unexpected events can occur, but in order to maintain the integrity of
-                        scheduling for all our clients, we adhere to the following policy:
+                        {dictionary[params.lang]?.appointmentPolicyDescription2}
                     </p>
                     <p className="plist">
-                        <em>Cancellation:</em> If you need to cancel your appointment, please inform us at least 24
-                        hours in advance. This gives us the opportunity to reallocate the time slot to someone else in
-                        need.
+                        <em>{dictionary[params.lang]?.appointmentPolicyDescription3}</em> {dictionary[params.lang]?.appointmentPolicyDescription4}
                     </p>
                     <p>
-                        <em>Late Cancellations & No-Shows:</em> Appointments cancelled with less than 24 hours notice
-                        or missed entirely will be charged the full session rate.
+                        <em>{dictionary[params.lang]?.appointmentPolicyDescription5}</em> {dictionary[params.lang]?.appointmentPolicyDescription6}
                     </p>
 
                     <p>
-                        <em>Rescheduling:</em> We value your commitment to therapy and understand that scheduling can
-                        sometimes be a challenge. To find available times and dates that are convenient for you,
-                        please use our scheduling tool on Simple Practice.
+                        <em>{dictionary[params.lang]?.appointmentPolicyDescription7}</em> {dictionary[params.lang]?.appointmentPolicyDescription8}
                     </p>
 
                     <button onClick={() => setShowModal(true)} className="body-button">
-                        <span className="button-text">Book Appointment</span>
+                        <span className="button-text">{dictionary[params.lang]?.bookAppointment}</span>
                         <span className="arrow-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" className="ionicon" viewBox="0 0 512 512">
                             <path
@@ -362,8 +354,8 @@ export default function Home({ params }: { params: { lang: string } }) {
             </div>
         </section>
 
-        <FAQSection />
-        <ReadySection />
+        <FAQSection params={{ lang: params.lang }} />
+        <ReadySection params={{ lang: params.lang }} />
 
     </main>
   )

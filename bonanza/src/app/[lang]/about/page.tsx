@@ -3,7 +3,7 @@ import Image from "next/image";
 import Giannina from "../../../../public/Giannina-2.jpg";
 import ReadySection from "@/app/[lang]/components/ReadySection";
 
-const Page = () => {
+const Page = ({ params }: { params: { lang: string } }) => {
     return (
         <main>
             <section className="section section-other about">
@@ -126,7 +126,7 @@ const Page = () => {
                 </div>
             </section>
 
-            <ReadySection />
+            <ReadySection params={{ lang: params.lang }} />
         </main>
     );
 };

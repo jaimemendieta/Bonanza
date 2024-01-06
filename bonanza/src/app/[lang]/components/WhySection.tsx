@@ -3,8 +3,9 @@
 import {useEffect, useState} from "react";
 import Image from "next/image";
 import Giannina from "../../../../public/Giannina-2.jpg";
+import {dictionary} from "@/content";
 
-const WhySection = () => {
+const WhySection = ({ params }: { params: { lang: string } }) => {
     const [isLargeScreen, setIsLargeScreen] = useState(false);
 
     useEffect(() => {
@@ -33,35 +34,27 @@ const WhySection = () => {
 
                     <div className="container__explained">
                         <div className="explanation__first">
-                            <h2>Why Choose Bonanza for Your Healing Journey?</h2>
+                            <h2>{dictionary[params.lang]?.whyChooseTitle}</h2>
 
-                            <h3>Meet Giannina Fuentes, LCSW - The Heart of Bonanza</h3>
+                            <h3>{dictionary[params.lang]?.meetGianninaTitle}</h3>
                             <p>
-                                Giannina Fuentes is not just another therapist; she&apos;s a beacon of hope, a testament to
-                                dedication, and the guiding light of Bonanza. With a strong academic foundation from the
-                                University of Utah, holding both a Bachelor&apos;s Degree in Psychology and a Master&apos;s Degree in
-                                Social Work, she is a decorated mental health professional.
+                                {dictionary[params.lang]?.gianninaDescription}
                             </p>
                         </div>
 
                         <div className="explanation">
-                            <h3>Experience & Expertise:</h3>
+                            <h3>{dictionary[params.lang]?.experienceExpertiseTitle}</h3>
                             <p>
-                                <em>Diverse Clientele:</em> Giannina has aided individuals across all age groups, guiding them through
-                                personal and familial challenges.
+                                <em>{dictionary[params.lang]?.diverseClienteleDescription1}</em> {dictionary[params.lang]?.diverseClienteleDescription2}
                             </p>
                             <p>
-                                <em>Specializations:</em> Her therapeutic prowess spans areas like childhood and adult trauma, domestic
-                                violence, anxiety, depression, stress, and relationship struggles.
+                                <em>{dictionary[params.lang]?.specializationsDescription1}</em> {dictionary[params.lang]?.specializationsDescription2}
                             </p>
                             <p>
-                                <em>Commitment to Children:</em> Giannina&apos;s unwavering dedication shines through her work as a child
-                                welfare worker for the Division of Child and Family Services, ensuring the welfare of children
-                                and families.
+                                <em>{dictionary[params.lang]?.commitmentToChildrenDescription1}</em> {dictionary[params.lang]?.commitmentToChildrenDescription2}
                             </p>
                             <p>
-                                <em>Inclusive Care:</em> She has a heart for those with disabilities, offering unparalleled support to
-                                individuals with conditions such as autism and ADHD.
+                                <em>{dictionary[params.lang]?.inclusiveCareDescription1}</em> {dictionary[params.lang]?.inclusiveCareDescription2}
                             </p>
                         </div>
                     </div>
@@ -73,39 +66,31 @@ const WhySection = () => {
                     <section className="section section-why">
                         <div className="container__explained">
                             <div className="explanation__first">
-                                <h2>Why Choose Bonanza for Your Healing Journey?</h2>
+                                <h2>{dictionary[params.lang]?.whyChooseTitle}</h2>
 
                                 <div className="image__giannina">
                                     <Image src={Giannina} alt="Therapist Image"/>
                                 </div>
 
-                                <h3>Meet Giannina Fuentes, LCSW - The Heart of Bonanza</h3>
+                                <h3>{dictionary[params.lang]?.meetGianninaTitle}</h3>
                                 <p>
-                                    Giannina Fuentes is not just another therapist; she&apos;s a beacon of hope, a testament to
-                                    dedication, and the guiding light of Bonanza. With a strong academic foundation from the
-                                    University of Utah, holding both a Bachelor&apos;s Degree in Psychology and a Master&apos;s Degree in
-                                    Social Work, she is a decorated mental health professional.
+                                    {dictionary[params.lang]?.gianninaDescription}
                                 </p>
                             </div>
 
                             <div className="explanation">
-                                <h3>Experience & Expertise:</h3>
+                                <h3>{dictionary[params.lang]?.experienceExpertiseTitle}</h3>
                                 <p>
-                                    <em>Diverse Clientele:</em> Giannina has aided individuals across all age groups, guiding them through
-                                    personal and familial challenges.
+                                    <em>{dictionary[params.lang]?.diverseClienteleDescription1}</em> {dictionary[params.lang]?.diverseClienteleDescription2}
                                 </p>
                                 <p>
-                                    <em>Specializations:</em> Her therapeutic prowess spans areas like childhood and adult trauma, domestic
-                                    violence, anxiety, depression, stress, and relationship struggles.
+                                    <em>{dictionary[params.lang]?.specializationsDescription1}</em> {dictionary[params.lang]?.specializationsDescription2}
                                 </p>
                                 <p>
-                                    <em>Commitment to Children:</em> Giannina&apos;s unwavering dedication shines through her work as a child
-                                    welfare worker for the Division of Child and Family Services, ensuring the welfare of children
-                                    and families.
+                                    <em>{dictionary[params.lang]?.commitmentToChildrenDescription1}</em> {dictionary[params.lang]?.commitmentToChildrenDescription2}
                                 </p>
                                 <p>
-                                    <em>Inclusive Care:</em> She has a heart for those with disabilities, offering unparalleled support to
-                                    individuals with conditions such as autism and ADHD.
+                                    <em>{dictionary[params.lang]?.inclusiveCareDescription1}</em> {dictionary[params.lang]?.inclusiveCareDescription2}
                                 </p>
                             </div>
                         </div>
