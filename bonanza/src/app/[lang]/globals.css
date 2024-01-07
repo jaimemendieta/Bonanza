@@ -344,6 +344,7 @@ html[lang="es"] .lang-es {
 
 .lang-en, .lang-es {
   cursor: pointer;
+  user-select: none;
 }
 
 .navigation .logo-link {
@@ -1511,6 +1512,10 @@ input, select, textarea {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #757575;
 }
 
 .form-wrapper {
