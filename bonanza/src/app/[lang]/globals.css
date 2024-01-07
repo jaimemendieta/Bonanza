@@ -305,6 +305,7 @@ em {
 .innermenu {
   padding: calc(9.33333333vw) calc(6.66666667vw) calc(6.66666667vw) calc(6.66666667vw);
   overflow: scroll;
+  user-select: none;
 }
 
 .mobile-navigation {
@@ -320,6 +321,12 @@ em {
   display: block;
   position: relative;
   text-align: left;
+}
+
+.mobile-menu-lang-box__footer {
+  margin-left: auto;
+  margin-right: 1em;
+  width: fit-content;
 }
 
 .mobile-menu-lang-box__footer li {
@@ -1037,12 +1044,13 @@ html[lang="es"] .lang-es {
   grid-template-areas:
           "area1 area2 area3"
           "area4 menu lang"
-          "area7 area8 area9"
+          "area7 logo logo"
           "end end end";
   gap: 1em;
   min-height: 33vh;
   overflow-wrap: normal;
   background-color: #1C1C1C;
+  user-select: none;
 }
 
 .mobile-menu-lang-box__footer {
@@ -1068,9 +1076,10 @@ html[lang="es"] .lang-es {
 }
 
 .logo__footer {
-  grid-area: area9;
+  grid-area: logo;
   display: flex;
   align-items: center;
+  justify-content: center;
   z-index: 2;
 }
 
@@ -1207,7 +1216,7 @@ html[lang="es"] .lang-es {
   padding-bottom: 1em;
 }
 
-@media (min-width: 411px) {
+@media (min-width: 546px) {
   .other-list__footer {
     flex-direction: row;
   }
