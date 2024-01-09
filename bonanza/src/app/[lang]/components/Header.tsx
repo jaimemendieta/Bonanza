@@ -7,8 +7,9 @@ import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-ma
 import Image from "next/image";
 import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
+import CookieConsent from "@/app/[lang]/components/CookieConsent";
 
-const Header = ({ params }: { params: { lang: string } }) => {
+const Header = ({ params }: { params: { lang: string, onLanguageSwitch: () => void}}) => {
     const [hovered, setHovered] = useState(false);
     const [isMobileView, setIsMobileView] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -72,7 +73,7 @@ const Header = ({ params }: { params: { lang: string } }) => {
     return (
         <>
             {isMobileView ? (
-                <MobileHeader params={{ lang: params.lang }}/>
+                <MobileHeader params={{ lang: params.lang, onLanguageSwitch: params.onLanguageSwitch }}/>
             ) : (
                 <>
                     <header className={`app-header ${visible ? "visible" : "hidden"} ${bgColor ? 'bg-color' : ''}`}>
@@ -91,7 +92,7 @@ const Header = ({ params }: { params: { lang: string } }) => {
                         <div className="header-action">
                             <span
                                 className="navigation-language-header"
-                                onClick={handleLanguageSwitch}
+                                onClick={params.onLanguageSwitch}
                                 onMouseEnter={handleMouseEnter}
                                 onMouseLeave={handleMouseLeave}
                             >

@@ -47,7 +47,7 @@ h1 {
   margin-bottom: 8px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   h1 {
     font-size: var(--font-lg);
   }
@@ -107,7 +107,7 @@ p {
   margin-bottom: 24px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   p {
     font-size: var(--font-mobile-sm);
   }
@@ -647,7 +647,7 @@ html[lang="es"] .lang-es {
   max-width: 475px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .container__hero {
     max-width: 860px;
   }
@@ -689,7 +689,7 @@ html[lang="es"] .lang-es {
   max-width: 292px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .title__hero {
     max-width: 600px;
   }
@@ -1892,4 +1892,121 @@ iframe {
 
 option {
   font-family: "museo-sans", sans-serif;
+}
+
+.cm {
+  display: block;
+  position: fixed;
+  background-color: rgba(251, 250, 245, 70%);
+  color: var(--main-foreground);
+  text-shadow: none;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: 0 .625em 1.875em #000;
+  max-width: 100%;
+  padding: 1em 1.4em 1.3em;
+  border-radius: .45em .45em 0 0;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+.c-inr {
+  font-size: .8em;
+}
+
+.c-bns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.4em;
+}
+
+.c-bn {
+  margin-bottom: 0;
+  user-select: none;
+  flex: 1;
+
+}
+
+.c-bn:hover {
+  background-color: var(--main-background);
+  border-color: var(--main-foreground);
+  color: var(--main-foreground);
+}
+
+.c-accept {
+  background-color: #eacd92;
+  border-color: #eacd92;
+  padding: .8em .5em;
+  font-size: .8em;
+}
+
+.c-reject {
+  margin-left: .5em;
+  color: var(--main-background);
+  background-color: var(--main-foreground);
+  padding: .8em .5em;
+  font-size: .8em;
+}
+
+.c-ttl {
+  font-weight: 500;
+}
+
+.c-txt {
+  padding-top: 1em;
+}
+
+@media (min-width: 360px) {
+  .c-inr {
+    font-size: .9em;
+  }
+}
+
+@media (min-width: 600px) {
+  .cm {
+    bottom: 1.25em;
+    right: 1.25em;
+    box-shadow: 0 .125em 0.875em #000;
+    max-width: 25em;
+    padding: 1em 1.4em 1.3em;
+    border-radius: .45em;
+  }
+
+  .c-inr {
+    font-size: 1em;
+  }
+
+  .c-accept {
+    font-size: 1em;
+  }
+
+  .c-reject {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cm {
+    box-shadow: 0 .625em 1.875em #000;
+    background-color: rgba(251, 250, 245, 90%);
+  }
+}
+
+@media (min-width: 1920px) {
+  .cm {
+
+  }
+
+  .c-inr {
+
+  }
+
+  .c-accept {
+    font-size: .85em;
+  }
+
+  .c-reject {
+    font-size: .85em;
+  }
 }

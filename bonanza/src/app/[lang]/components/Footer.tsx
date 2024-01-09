@@ -2,14 +2,14 @@ import Link from "next/link";
 import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
 
-const Footer = ({ params }: { params: { lang: string } }) => {
+const Footer = ({ params }: { params: { lang: string, onLanguageSwitch: () => void}}) => {
     return (
         <footer className="footer">
             <ul className="mobile-menu-lang-box__footer">
-                <li className="lang-en" onClick={handleLanguageSwitch}>
+                <li className="lang-en" onClick={params.onLanguageSwitch}>
                     EN
                 </li>
-                <li className="lang-es" onClick={handleLanguageSwitch}>
+                <li className="lang-es" onClick={params.onLanguageSwitch}>
                     ES
                 </li>
             </ul>

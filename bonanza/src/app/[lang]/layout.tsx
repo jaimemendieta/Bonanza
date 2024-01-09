@@ -5,7 +5,9 @@ import './globals.css'
 import Header from "@/app/[lang]/components/Header";
 import Footer from "@/app/[lang]/components/Footer";
 import { usePathname, useSearchParams } from 'next/navigation';
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
+import {handleLanguageSwitch} from "@/languageSwitcher";
+import CookieConsent from "@/app/[lang]/components/CookieConsent";
 
 const museo_sans = localFont({
     src: [
@@ -78,37 +80,73 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
     const [currentLocale, setCurrentLocale] = useState('en');
+    const [showCookieConsent, setShowCookieConsent] = useState(false);
+    const [pendingLanguageSwitch, setPendingLanguageSwitch] = useState(false);
+
+    const getCookie = (name: string) => {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        const lastPart = parts.pop();
+
+        if (lastPart) {
+            return lastPart.split(';').shift();
+        }
+
+        return null;
+    };
 
     useEffect(() => {
-        // Function to parse the cookie
-        const getCookie = (name: string) => {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            const lastPart = parts.pop();
-
-            if (lastPart) {
-                return lastPart.split(';').shift();
-            }
-
-            return null;
-        };
-
-        // Update currentLocale based on the cookie
+        // Update currentLocale based on the cookie or browser locale
         const localeFromCookie = getCookie('NEXT_LOCALE');
         if (localeFromCookie) {
             setCurrentLocale(localeFromCookie);
+        } else {
+            const browserLocale = navigator.language;
+            if (['en', 'es'].includes(browserLocale)) {
+                setCurrentLocale(browserLocale);
+            }
         }
 
         // Update the lang attribute of the html tag
         document.documentElement.lang = currentLocale;
+
+        // Show cookie policy for first time users
+        const consent = localStorage.getItem('cookieConsent');
+        if (consent === null) {
+            setShowCookieConsent(true);
+        }
     }, [currentLocale]);
+
+    const showCookieConsentUI = () => {
+        setShowCookieConsent(true);
+        setPendingLanguageSwitch(true);
+    };
+
+    const handleUserDecision = (accepted: boolean) => {
+        setShowCookieConsent(false);
+        if (accepted) {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.cookie = `NEXT_LOCALE=${currentLocale}; path=/; max-age=31536000; samesite=lax`;
+            if (pendingLanguageSwitch) {
+                handleLanguageSwitch(() => {}, true);
+            }
+        } else {
+            localStorage.setItem('cookieConsent', 'denied');
+        }
+        setPendingLanguageSwitch(false);
+    };
+
+    const onLanguageSwitch = () => {
+        handleLanguageSwitch(showCookieConsentUI);
+    };
 
     return (
     <html lang={currentLocale}>
       <body className={museo_sans.className}>
-      <Header params={{ lang: currentLocale }} />
+      <Header params={{ lang: currentLocale, onLanguageSwitch }} />
       {children}
-      <Footer params={{ lang: currentLocale }} />
+      <Footer params={{ lang: currentLocale, onLanguageSwitch }} />
+      {showCookieConsent && <CookieConsent onDecision={handleUserDecision} params={{ lang: currentLocale }} />}
       <SpeedInsights />
       </body>
     </html>

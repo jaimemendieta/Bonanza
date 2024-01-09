@@ -7,7 +7,7 @@ import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
 
 
-const MobileHeader = ({ params }: { params: { lang: string } }) => {
+const MobileHeader = ({ params }: { params: { lang: string, onLanguageSwitch: () => void}}) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
@@ -133,10 +133,10 @@ const MobileHeader = ({ params }: { params: { lang: string } }) => {
                         </Link>
 
                         <ul className="mobile-menu-lang-box">
-                            <li className="lang-en" onClick={handleLanguageSwitch}>
+                            <li className="lang-en" onClick={params.onLanguageSwitch}>
                                 EN
                             </li>
-                            <li className="lang-es" onClick={handleLanguageSwitch}>
+                            <li className="lang-es" onClick={params.onLanguageSwitch}>
                                 ES
                             </li>
                         </ul>
