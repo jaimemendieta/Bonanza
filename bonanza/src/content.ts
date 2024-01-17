@@ -680,7 +680,7 @@ export const dictionary: Record<string, DictionaryEntry> = {
         beyondTherapyDescription: "Fuera de su vida profesional, Giannina enriquece su vida personal como madre a través del aprendizaje y la educación continua. Disfruta de momentos con su familia, paseos al aire libre con su querida Luna, y disfruta del baile.",
         uniqueExperienceTitle: "Una Experiencia Terapéutica Única:",
         uniqueExperienceDescription1: "Disfruta del calor y la ternura de Luna, una perrita terapeuta durante las sesiones de terapia. Su presencia gentil puede mejorar el ambiente terapéutico, proporcionando una capa adicional de relajación y conexión.",
-        uniqueExperienceDescription2: "Cuando elija Bonanza, estará eligiendo más que una terapia; estará eligiendo un santuario de comprensión, experiencia y cuidado compasivo. Aquí es donde comienza su viaje hacia la curación y la renovación.",
+        uniqueExperienceDescription2: "Cuando elija Bonanza, estará eligiendo más que una terapia; estará eligiendo un santuario de comprensión, experiencia y cuidado compasivo. Aquí inicia su camino hacia la sanación y el renacer.",
 
         affordableCareTitle: "Atención Accesible y Personalizada a Sus Necesidades",
         sessionRatesTitle: "Nuestras Tarifas de Sesión de Terapia:",
