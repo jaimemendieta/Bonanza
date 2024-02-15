@@ -199,6 +199,17 @@ const Page = ( { params }: { params: { lang: string } } ) => {
 
             </section>
             <Modal show={showModal} message={modalMessage} onClose={handleCloseModal} />
+
+            <section className="section section-other section-contact">
+                <div className="container__explained">
+                    <div className="explanation__first">
+                        <h1>{dictionary[params.lang]?.myContactTitle}</h1>
+                        <h3>{dictionary[params.lang]?.contact1}</h3>
+                        <h3>{dictionary[params.lang]?.contact2}</h3>
+                        <h3>{dictionary[params.lang]?.contact3}</h3>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 };

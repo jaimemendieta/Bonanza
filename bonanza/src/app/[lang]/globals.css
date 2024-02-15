@@ -849,10 +849,10 @@ html[lang="es"] .lang-es {
 
 @media (min-width: 1920px) {
   .container__explained {
-    padding-right: 0;
+    padding-right: 4em;
     padding-left: 4em;
     padding-top: 44px;
-    margin-right: 50px;
+    margin-right: auto;
     margin-left: auto;
     max-width: 898px;
   }
@@ -921,7 +921,7 @@ html[lang="es"] .lang-es {
   .image__explained {
     height: auto;
     width: 50%;
-    margin-left: auto;
+    /*margin-left: auto;*/
   }
 }
 
@@ -1192,6 +1192,21 @@ html[lang="es"] .lang-es {
     background-size: 450%;
     background-position-x: -1295px;
     background-position-y: -420px;
+  }
+}
+
+@media (min-width: 2300px) {
+  .logo__background {
+    background-position-x: -1571px;
+    background-position-y: -537px;
+  }
+}
+
+@media (min-width: 3018px) {
+  .logo__background {
+    background-size: 423%;
+    background-position-x: -2186px;
+    background-position-y: -1035px;
   }
 }
 
@@ -2008,5 +2023,39 @@ option {
 
   .c-reject {
     font-size: .85em;
+  }
+}
+
+.outer-container {
+  background: var(--main-background);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (min-width: 2190px) {
+  .outer-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+@media (min-width: 2300px) {
+  .outer-container {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (min-width: 2500px) {
+  .outer-container {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (min-width: 2800px) {
+  .outer-container {
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }

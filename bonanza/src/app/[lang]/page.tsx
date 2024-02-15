@@ -25,6 +25,8 @@ export default function Home({ params }: { params: { lang: string } }) {
     return (
     <main>
         <Hero params={{ lang: params.lang }}/>
+        <div className="outer-container">
+
         <section className="section section-emdr-explained">
             <div className="container__explained">
                 <div className="explanation__first">
@@ -95,6 +97,7 @@ export default function Home({ params }: { params: { lang: string } }) {
                 <Image src={BonanzaImageH} alt="Scenic Image H"/>
             </div>
         </section>
+
 
         <WhySection params={{ lang: params.lang }} />
 
@@ -358,6 +361,8 @@ export default function Home({ params }: { params: { lang: string } }) {
 
         <FAQSection params={{ lang: params.lang }} />
         <ReadySection params={{ lang: params.lang }} />
+        </div>
+
 
     </main>
   )

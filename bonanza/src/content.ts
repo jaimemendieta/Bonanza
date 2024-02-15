@@ -205,6 +205,11 @@ interface DictionaryEntry {
     submitButtonDefault: string;
     submitButtonLoading: string;
 
+    myContactTitle: string;
+    contact1: string;
+    contact2: string;
+    contact3: string;
+
     // #######################################################################################################
     // FAQ PAGE
     faqPageTitle: string;
@@ -498,6 +503,11 @@ export const dictionary: Record<string, DictionaryEntry> = {
         messageFieldPlaceholder: "Feel free to message me any questions, or thoughts.",
         submitButtonDefault: "Submit",
         submitButtonLoading: "Sending...",
+
+        myContactTitle: "My Contact Info",
+        contact1: "Email: bonanzacs.13@gmail.com",
+        contact2: "Address: 563 W 500 S STE 440, Bountiful, UT 84010",
+        contact3: "Phone: (801) 872-9654",
 
         // #######################################################################################################
         // FAQ PAGE
@@ -904,6 +914,11 @@ export const dictionary: Record<string, DictionaryEntry> = {
         messageFieldPlaceholder: "Siéntete libre de enviarme cualquier pregunta o pensamiento.",
         submitButtonDefault: "Enviar",
         submitButtonLoading: "Enviando...",
+
+        myContactTitle: "Mi Información de Contacto",
+        contact1: "Correo: bonanzacs.13@gmail.com",
+        contact2: "Dirección: 563 W 500 S STE 440, Bountiful, UT 84010",
+        contact3: "Teléfono: (801) 872-9654",
 
         // #######################################################################################################
         // FAQ PAGE

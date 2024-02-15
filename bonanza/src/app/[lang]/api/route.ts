@@ -3,7 +3,8 @@ import nodemailer from 'nodemailer';
 export async function POST(req: Request, res: Response) {
 
     const transporter = nodemailer.createTransport({
-        host: 'mail.privateemail.com',
+        service: "Gmail",
+        host: 'smtp.gmail.com',
         port: 465,
         secure: true,
         auth: {
@@ -31,9 +32,9 @@ export async function POST(req: Request, res: Response) {
 
     try {
         const emailResponse = await transporter.sendMail({
-            from: 'giannina@bonanzacounseling.com',
+            from: 'bonanzacs.13@gmail.com',
             replyTo: `"${name}" <${email}>`,
-            to: 'giannina@bonanzacounseling.com',
+            to: 'bonanzacs.13@gmail.com',
             subject: subject,
             text: fullMessage,
         });
