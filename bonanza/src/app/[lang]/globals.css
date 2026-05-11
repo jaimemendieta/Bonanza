@@ -31,6 +31,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+html,
+body {
+  background-color: var(--main-background);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -862,7 +867,7 @@ html[lang="es"] .lang-es {
     margin-top: 44px;
     padding-top: 22px;
     padding-right: 10%;
-    max-width: 1280px;
+    max-width: 1670px;
   }
 
   .container__explained.easy, .container__explained.flexible {
@@ -1544,6 +1549,15 @@ input::placeholder, textarea::placeholder {
 
 .form-wrapper {
   width: 80%;
+  max-width: 1670px;
+}
+
+.section-contact .container__explained {
+  width: 80%;
+  max-width: 1670px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0;
 }
 
 .t-container {
@@ -1579,6 +1593,11 @@ input::placeholder, textarea::placeholder {
   padding-top: 44px;
 }
 
+.services-content .image__explained img {
+  width: 100%;
+  height: auto;
+}
+
 .container__infobox {
   display: flex;
   flex-direction: column;
@@ -1596,6 +1615,7 @@ input::placeholder, textarea::placeholder {
   }
 
   .services-content .image__explained img {
+    height: 100%;
     object-position: center;
   }
 
@@ -2034,28 +2054,9 @@ option {
 
 @media (min-width: 2190px) {
   .outer-container {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-
-@media (min-width: 2300px) {
-  .outer-container {
-    padding-left: 4%;
-    padding-right: 4%;
-  }
-}
-
-@media (min-width: 2500px) {
-  .outer-container {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-}
-
-@media (min-width: 2800px) {
-  .outer-container {
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 100%;
+    max-width: 2160px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

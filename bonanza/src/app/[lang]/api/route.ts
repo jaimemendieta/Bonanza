@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request) {
 
     const transporter = nodemailer.createTransport({
         service: "Gmail",
@@ -13,9 +13,7 @@ export async function POST(req: Request, res: Response) {
         }
     });
 
-    // Manually parse the JSON body from the request
-    const body = await req.body;
-    const data = await new Response(body).json();
+    const data = await req.json();
     const { name, email, subject, message } = data;
 
     // Server validation
@@ -31,7 +29,7 @@ export async function POST(req: Request, res: Response) {
     const fullMessage = `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`;
 
     try {
-        const emailResponse = await transporter.sendMail({
+        await transporter.sendMail({
             from: 'bonanzacs.13@gmail.com',
             replyTo: `"${name}" <${email}>`,
             to: 'bonanzacs.13@gmail.com',

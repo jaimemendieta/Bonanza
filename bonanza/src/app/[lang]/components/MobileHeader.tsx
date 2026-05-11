@@ -57,6 +57,7 @@ const MobileHeader = ({ params }: { params: { lang: string, onLanguageSwitch: ()
                                 className="logo-header"
                                 src={HorizontalLogo}
                                 alt="Bonanza Logo"
+                                loading="eager"
                             />
                         </Link>
                     </div>

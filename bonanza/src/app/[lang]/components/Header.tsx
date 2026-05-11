@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useSyncExternalStore} from "react";
 import MobileHeader from "@/app/[lang]/components/MobileHeader";
 import LanguageIcon from "../../../../public/language.svg";
 import HorizontalLogo from "../../../../public/bonanza-horizontal-combination-mark.svg";
@@ -9,9 +9,27 @@ import { handleLanguageSwitch } from "@/languageSwitcher";
 import { dictionary } from '@/content';
 import CookieConsent from "@/app/[lang]/components/CookieConsent";
 
+const mobileViewQuery = '(max-width: 1279px)';
+
+const subscribeToMobileView = (callback: () => void) => {
+    const mediaQuery = window.matchMedia(mobileViewQuery);
+    mediaQuery.addEventListener('change', callback);
+
+    return () => {
+        mediaQuery.removeEventListener('change', callback);
+    };
+};
+
+const getMobileViewSnapshot = () => window.matchMedia(mobileViewQuery).matches;
+const getServerMobileViewSnapshot = () => false;
+
 const Header = ({ params }: { params: { lang: string, onLanguageSwitch: () => void}}) => {
     const [hovered, setHovered] = useState(false);
-    const [isMobileView, setIsMobileView] = useState(false);
+    const isMobileView = useSyncExternalStore(
+        subscribeToMobileView,
+        getMobileViewSnapshot,
+        getServerMobileViewSnapshot,
+    );
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [bgColor, setBgColor] = useState(false);
@@ -24,22 +42,6 @@ const Header = ({ params }: { params: { lang: string, onLanguageSwitch: () => vo
     const handleMouseLeave = () => {
         setHovered(false);
     };
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 1279px)');
-
-        const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-            setIsMobileView(e.matches);
-        };
-
-        mediaQuery.addListener(handleMediaQueryChange);
-        setIsMobileView(mediaQuery.matches);
-
-        return () => {
-            mediaQuery.removeListener(handleMediaQueryChange);
-        };
-    }, []);
-
 
     useEffect(() => {
         const handleScroll = () => {
@@ -81,7 +83,8 @@ const Header = ({ params }: { params: { lang: string, onLanguageSwitch: () => vo
                             <Link href="/" className="logo-link">
                                 <Image className="logo-header"
                                      src={HorizontalLogo}
-                                     alt="Bonanza Logo"/>
+                                     alt="Bonanza Logo"
+                                     loading="eager"/>
                             </Link>
                             <Link href="/about">{dictionary[params.lang]?.headerAbout}</Link>
                             <Link href="/services">{dictionary[params.lang]?.headerServices}</Link>

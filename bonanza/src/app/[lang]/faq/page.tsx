@@ -4,7 +4,8 @@ import React, {useState} from "react";
 import Link from "next/link";
 import {dictionary} from "@/content";
 
-const Page = ({ params }: { params: { lang: string } }) => {
+const Page = ({ params: paramsPromise }: { params: Promise<{ lang: string }> }) => {
+    const params = React.use(paramsPromise);
     const [openStates, setOpenStates] = useState<boolean[]>(new Array(dictionary[params.lang]?.faqs.length).fill(false));
     const currentFaqs = dictionary[params.lang]?.faqs;
 

@@ -28,7 +28,7 @@ function getLocale(request: Request): string {
     return match(languages, locales, defaultLocale);
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
     const cookies = parseCookies(request);
     const cookieLocale = cookies['NEXT_LOCALE'];
 

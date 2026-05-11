@@ -19,7 +19,8 @@ import FAQSection from "@/app/[lang]/components/FAQSection";
 import ReadySection from "@/app/[lang]/components/ReadySection";
 import Link from "next/link";
 
-export default function Home({ params }: { params: { lang: string } }) {
+export default async function Home({ params: paramsPromise }: { params: Promise<{ lang: string }> }) {
+    const params = await paramsPromise;
     const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
 
     return (

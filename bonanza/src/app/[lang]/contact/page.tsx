@@ -25,7 +25,8 @@ const Modal: React.FC<ModalProps> = ({ show, message, onClose }) => {
     )
 }
 
-const Page = ( { params }: { params: { lang: string } } ) => {
+const Page = ( { params: paramsPromise }: { params: Promise<{ lang: string }> } ) => {
+    const params = React.use(paramsPromise);
     const [showModal, setShowModal] = useState(false);
     const [modalMessage, setModalMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -203,7 +204,7 @@ const Page = ( { params }: { params: { lang: string } } ) => {
             <section className="section section-other section-contact">
                 <div className="container__explained">
                     <div className="explanation__first">
-                        <h1>{dictionary[params.lang]?.myContactTitle}</h1>
+                        <h2>{dictionary[params.lang]?.myContactTitle}</h2>
                         <h3>{dictionary[params.lang]?.contact1}</h3>
                         <h3>{dictionary[params.lang]?.contact2}</h3>
                         <h3>{dictionary[params.lang]?.contact3}</h3>

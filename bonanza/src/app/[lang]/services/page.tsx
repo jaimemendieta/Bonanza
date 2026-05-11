@@ -4,7 +4,8 @@ import Link from "next/link";
 
 
 
-const Page = ( { params }: { params: { lang: string } } ) => {
+const Page = async ( { params: paramsPromise }: { params: Promise<{ lang: string }> } ) => {
+    const params = await paramsPromise;
     const clientPortalUrl= "https://giannina-fuentes.clientsecure.me";
     const currentServices = dictionary[params.lang]?.services;
 

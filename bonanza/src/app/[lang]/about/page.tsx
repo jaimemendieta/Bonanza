@@ -4,7 +4,9 @@ import Giannina from "../../../../public/Giannina-2.jpg";
 import ReadySection from "@/app/[lang]/components/ReadySection";
 import {dictionary} from "@/content";
 
-const Page = ({ params }: { params: { lang: string } }) => {
+const Page = async ({ params: paramsPromise }: { params: Promise<{ lang: string }> }) => {
+    const params = await paramsPromise;
+
     return (
         <main>
             <section className="section section-other about">
